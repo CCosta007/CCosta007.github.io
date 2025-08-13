@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #3589A1;">
     <!--Main Heading for the contacts page-->
     <header>
         <h1 style="color:#8a2be2;">Contact Me</h1>
@@ -23,7 +23,33 @@
     </nav>
     <main>
         <section>
-            <p>ADD TEXT HERE</p>
+            <!--CSS for modifying the contact me container. Used for experimentation purposes at this point -->
+            <style>
+                .contact-container{
+                    display:flex;
+                    flex-direction: column;
+                    background-color: #8a2be2;
+                    box-shadow: 1px 2px 4px rgba(0,0,0,0.1); 
+                    color: #21dd10;
+                    border-radius: 10px;
+                    text-align:left;
+                    max-width: 250px;
+                    position:relative;
+                }
+                .contact-container h3{
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    margin-bottom: 0px;
+                    margin-left: 5px;
+                }
+                .contact-container p{
+                    margin-left: 30px;
+                }
+            </style>
+            <!--Class for the contact me section. ALlows for the specific info within this class to be altered easier and all together-->
+            <div class="contact-container">
+                <h3>My Email:</h3>
+                <p>chase.costa@myacu.edu.au</p>
+            </div>
         </section>
     </main>
 </body>
