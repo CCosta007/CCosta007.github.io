@@ -13,22 +13,50 @@
 </style>
 <body style="background-color: #F5F5F7; font-family: Montserrat;">
     <!--FROM LECTURE 2-->
-
-    <!--Main Heading for the home page-->
-    <header>
-        <h1 style="color:#8a2be2;">Chase's Teaching Portfolio</h1>
-    </header>
     <!--Navigation menu section-->
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="teaching.html">Teaching Practice</a></li>
-            <li><a href="projects.html">Project Showcase</a></li>
-            <li><a href="worksamples.html">Samples of Work</a></li>
-            <li><a href="contacts.html">Contact Me</a></li>
-        </ul>
+        <style>
+            .menu-background{
+                background-color: #FFF;
+                opacity: 0.9;
+                top:0;
+                padding:20px;
+                position: fixed;
+                width: 100%;
+            }
+            /*So the navigation list is at the top of the page, and stays in place when scrolling*/
+            .nav-list{
+                position: fixed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                list-style-type: none;
+                gap: 50px;
+                flex-grow: 1;
+                font-size: small;
+                white-space: nowrap; /* so text doesn't go to new line when browser size changes*/
+                overflow: hidden;
+                top:0;
+                width:90%;
+
+            }
+        </style>
+        <div class="menu-background">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="teaching.html">Teaching Practice</a></li>
+                <li><a href="projects.html">Project Showcase</a></li>
+                <li><a href="worksamples.html">Samples of Work</a></li>
+                <li><a href="contacts.html">Contact Me</a></li>
+            </ul>
+        </div>
     </nav>
+    <!--Main Heading for the home page-->
+    <header>
+        <h1 style="color:#8a2be2; padding: 20px;">Chase's Teaching Portfolio</h1>
+    </header>
+
     <!--the main content area of the homepage-->
     <main style="color:#1D1D1F;">
         <!--My profile photo section-->
