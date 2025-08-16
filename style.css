@@ -5,6 +5,13 @@
     src: url(https://fonts.google.com/specimen/Montserrat);
     }
 
+body{
+    background-color: #F5F5F7; 
+    font-family: Montserrat; 
+    margin: 0px;
+    color: #1D1D1F;
+}
+
 .menu-background{
     background-color: rgba(255, 255, 255, 0.6); /* full white, with 0.6 opacity*/
     backdrop-filter: blur(15px); /*add a blur effect so when words go behind the layer, they don't interfere with the nav bar*/
@@ -37,11 +44,6 @@
     text-decoration:underline;
 }
 
-body{
-    background-color: #F5F5F7; 
-    font-family: Montserrat; 
-    margin: 0;
-}
 /*-------------------------------CSS for index page-----------------------------------------------------*/
 
 .index-header h1{
@@ -52,7 +54,16 @@ body{
     margin: 20px;
 }
 /*-----------------------------------CSS for about page-------------------------------------------------*/
-
+.about-header h1{
+    color:#196f72;
+    padding: 20px;
+}
+.about-main-content h3 {
+    text-decoration:underline;
+}
+.about-main-content h2{
+    color:#21dd10;
+}
 .placement-experience-table table{
     width: 100%;
     border-collapse: collapse;
@@ -85,6 +96,11 @@ body{
 }
 /*-----------------------------------CSS for teaching page-------------------------------------------------*/
 
+.teaching-header h1{
+    color: #8a2be2; 
+    padding:20px;
+}
+
 .teaching-philosophy{
     background-color: #A4BEE8;
     box-shadow: 1px 2px 4px rgba(0,0,0,0.1); 
@@ -97,7 +113,10 @@ body{
     margin: 20px;
 }
 /*----------------------------------CSS for work sample page--------------------------------------------------*/
-
+.work-sample-header h1{
+    color:#8a2be2;
+    padding: 20px;
+}
 .work-sample-container{
     display: flex;
     flex-direction: column;
@@ -119,6 +138,10 @@ body{
 
 /*-------------------------------------- CSS for contacts page----------------------------------------------*/
 
+.contact-header h1{
+    color: rgb(255,140,60); 
+    padding: 20px;
+}
 /*CSS for modifying the contact me container. Used for experimentation purposes at this point*/
 .contact-container{
     display:flex;
@@ -143,6 +166,10 @@ body{
 
 /*------------------------------------CSS for projects page------------------------------------------------*/
 
+.projects-header h1{
+    color: rgb(255,140,60); 
+    padding: 20px;
+}
 /*Section for showing projects or units that have I have taught using flexbox*/
 .project-card-flex-container{
     display: flex;
