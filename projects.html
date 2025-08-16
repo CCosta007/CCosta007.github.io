@@ -3,44 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Chase's Teaching Portfolio - Class Projects and Work Samples</title>
 </head>
-<body style="background-color: #F5F5F7; font-family: Montserrat; margin: 0;">
+
+<body>
     <!--Navigation menu section-->
     <nav>
-        <style>
-            .menu-background{
-                background-color: rgba(255, 255, 255, 0.6); /* full white, with 0.6 opacity*/
-                backdrop-filter: blur(15px); /*add a blur effect so when words go behind the layer, they don't interfere with the nav bar*/
-                top:0;
-                padding:20px;
-                position: fixed;
-                width: 100%;
-            }
-            /*So the navigation list is at the top of the page, and stays in place when scrolling*/
-            .nav-list{
-                position: fixed;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                list-style-type: none;
-                gap: 50px;
-                flex-grow: 1;
-                font-size: small;
-                white-space: nowrap; /* so text doesn't go to new line when browser size changes*/
-                overflow: hidden;
-                top:0;
-                width:90%;
-            }
-            /* nav menu text is now black, and has an underline when hovered over by mouse (using hover pseudoclass)*/
-            .nav-list a{
-               text-decoration: none; 
-               color:black;
-            }
-            .nav-list a:hover{
-                text-decoration:underline;
-            }
-        </style>
         <div class="menu-background">
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -57,37 +26,9 @@
         <h1 style="color:#8a2be2; padding:20px;">Project Showcase</h1>
     </header>
     <main>
-        <!--Section for showing projects or units that have I have taught using flexbox-->
         <section>
-            <style>
-                .flex-container{
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                    justify-content: space-between;
-                    margin: 20px;
-                }
-                .project-card{
-                    flex: 1 1 150px;
-                    background-color: #f9f9f9;
-                    border: 1px solid #ddd;
-                    padding: 15px;
-                    border-radius: 8px;
-                    box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
-                }
-                .project-card img{
-                    width: 100%;
-                    height:auto;
-                    border-radius: 4px;
-                }
-                .project-card h3{
-                    margin-top: 10px;
-                    font-size: 1.1rem;
-                    color:#2c3e50;
-                }
-            </style>
             <!--Utilizing flexbox to create a more aesthetic section of the page, NOTE: stock images have been used as I currently cannot find project photos and wasn't sure what a suitable alternative would be. However, now the structure is in place, it can be refactored later much easier-->
-            <div class="flex-container">
+            <div class="project-card-flex-container">
                 <div class ="project-card">
                     <h3>Project 1</h3>
                     <p>Building a BitBot apart of a year 9 Digital Technologies unit</p>

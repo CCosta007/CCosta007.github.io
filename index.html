@@ -3,51 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Chase's Teaching Portfolio - Home</title>
 </head>
-<style>
-    @font-face {
-        font-family: 'Montserrat';
-        src: url(https://fonts.google.com/specimen/Montserrat);
-    }
-</style>
-<body style="background-color: #F5F5F7; font-family: Montserrat; margin: 0;">
+
+<body>
     <!--FROM LECTURE 2-->
     <!--Navigation menu section-->
     <nav>
-        <style>
-            .menu-background{
-                background-color: rgba(255, 255, 255, 0.6); /* full white, with 0.6 opacity*/
-                backdrop-filter: blur(15px); /*add a blur effect so when words go behind the layer, they don't interfere with the nav bar*/
-                top:0;
-                padding:20px;
-                position: fixed;
-                width: 100%;
-            }
-            /*So the navigation list is at the top of the page, and stays in place when scrolling*/
-            .nav-list{
-                position: fixed;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                list-style-type: none;
-                gap: 50px;
-                flex-grow: 1;
-                font-size: small;
-                white-space: nowrap; /* so text doesn't go to new line when browser size changes*/
-                overflow: hidden;
-                top:0;
-                width:90%;
-            }
-            /* nav menu text is now black, and has an underline when hovered over by mouse (using hover pseudoclass)*/
-            .nav-list a{
-               text-decoration: none; 
-               color:black;
-            }
-            .nav-list a:hover{
-                text-decoration:underline;
-            }
-        </style>
         <div class="menu-background">
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -60,12 +23,12 @@
         </div>
     </nav>
     <!--Main Heading for the home page-->
-    <header>
-        <h1 style="color:#8a2be2; padding: 20px;">Chase's Teaching Portfolio</h1>
+    <header class="index-header">
+        <h1>Chase's Teaching Portfolio</h1>
     </header>
 
     <!--the main content area of the homepage-->
-    <main style="color:#1D1D1F; margin: 20px;">
+    <main class="index-main-content">
         <!--My profile photo section-->
         <section>
             <img src="images/profile-picture-circle.png" alt="My Profile Photo. Smiling at the camera" width="200px">
@@ -73,7 +36,7 @@
         <!--unordered list of my professional summary (section)-->
         <section>
             <h2>Professional Summary</h2>
-            <ul style="font-size: medium;">
+            <ul>
                 <li>Digital Technologies and Mathematics Pre-Service Teacher</li>
                 <li>Run a numeracy support program at Buckley Park College</li>
             </ul>
@@ -86,8 +49,7 @@
                 <li>Changed to a Bachelor's degree in Education (Secondary) / Arts(Mathematics) in 2022</li>
                 <li>Began work as a Learning Support Officer in 2024</li>
             </ol>
-        </section>
-        
+        </section>   
     </main>
 </body>
 </html> 

@@ -3,44 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Chase's Teaching Portfolio - Contact Me</title>
 </head>
-<body style="background-color: #F5F5F7; font-family: Montserrat; margin: 0;">
+<body>
     <!--Navigation menu section-->
     <nav>
-        <style>
-            .menu-background{
-                background-color: rgba(255, 255, 255, 0.6); /* full white, with 0.6 opacity*/
-                backdrop-filter: blur(15px); /*add a blur effect so when words go behind the layer, they don't interfere with the nav bar*/
-                top:0;
-                padding:20px;
-                position: fixed;
-                width: 100%;
-            }
-            /*So the navigation list is at the top of the page, and stays in place when scrolling*/
-            .nav-list{
-                position: fixed;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                list-style-type: none;
-                gap: 50px;
-                flex-grow: 1;
-                font-size: small;
-                white-space: nowrap; /* so text doesn't go to new line when browser size changes*/
-                overflow: hidden;
-                top:0;
-                width:90%;
-            }
-            /* nav menu text is now black, and has an underline when hovered over by mouse (using hover pseudoclass)*/
-            .nav-list a{
-               text-decoration: none; 
-               color:black;
-            }
-            .nav-list a:hover{
-                text-decoration:underline;
-            }
-        </style>
         <div class="menu-background">
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -58,29 +26,6 @@
     </header>
     <main>
         <section>
-            <!--CSS for modifying the contact me container. Used for experimentation purposes at this point -->
-            <style>
-                .contact-container{
-                    display:flex;
-                    flex-direction: column;
-                    background-color: #8a2be2;
-                    box-shadow: 1px 2px 4px rgba(0,0,0,0.1); 
-                    color: #21dd10;
-                    border-radius: 10px;
-                    text-align:left;
-                    max-width: 250px;
-                    position:relative;
-                    margin: 20px;
-                }
-                .contact-container h3{
-                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    margin-bottom: 0px;
-                    margin-left: 5px;
-                }
-                .contact-container p{
-                    margin-left: 20px;
-                }
-            </style>
             <!--Class for the contact me section. ALlows for the specific info within this class to be altered easier and all together-->
             <div class="contact-container">
                 <h3>My Email:</h3>

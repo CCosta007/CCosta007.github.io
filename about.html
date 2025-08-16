@@ -3,50 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Chase's Teaching Portfolio - About Me</title>
 </head>
-<style>
-    @font-face {
-        font-family: 'Montserrat';
-        src: url(https://fonts.google.com/specimen/Montserrat);
-    }
-</style>
+
 <body style="background-color: #F5F5F7; font-family: Montserrat; margin: 0;">
     <!--Navigation menu section-->
     <nav>
-        <style>
-            .menu-background{
-                background-color: rgba(255, 255, 255, 0.6); /* full white, with 0.6 opacity*/
-                backdrop-filter: blur(15px); /*add a blur effect so when words go behind the layer, they don't interfere with the nav bar*/
-                top:0;
-                padding:20px;
-                position: fixed;
-                width: 100%;
-            }
-            /*So the navigation list is at the top of the page, and stays in place when scrolling*/
-            .nav-list{
-                position: fixed;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                list-style-type: none;
-                gap: 50px;
-                flex-grow: 1;
-                font-size: small;
-                white-space: nowrap; /* so text doesn't go to new line when browser size changes*/
-                overflow: hidden;
-                top:0;
-                width:90%;
-            }
-            /* nav menu text is now black, and has an underline when hovered over by mouse (using hover pseudoclass)*/
-            .nav-list a{
-               text-decoration: none; 
-               color:black;
-            }
-            .nav-list a:hover{
-                text-decoration:underline;
-            }
-        </style>
         <div class="menu-background">
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -90,67 +53,37 @@
         </section>
         <!--This section is focused on providing placement overview as a table-->
         <section>
-            <style>
-                table{
-                    width: 100%;
-                    border-collapse: collapse;
-                    margin-top: 10px;
-                    font-family: Arial, Helvetica, sans-serif;
-                }
-                th,td {
-                    border: 1px solid #ccc;
-                    padding: 10px 12px; 
-                    text-align: left;
-                }
-                thead{
-                    background-color:#8a2be2;
-                }
-                th{
-                    color:#FFF8DC;
-                    font-weight:bold;
-                }
-                tr:nth-child(even){
-                    background-color:#196f72;
-                }
-                td{
-                    color:#1D1D1F;
-                }
-                h2{
-                    font-family:'Courier New', Courier, monospace;
-                    font-size:1.4rem;
-                    margin-bottom: 8px;
-                    color:#1D1D1F;
-                }
-            </style>
             <h2>Placement Overview</h2>
-            <table>
-                <thead>
-                    <th>School</th>
-                    <th>Subjects Taught</th>
-                    <th>Year Level</th>
-                    <th>Term</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Prahran High School</td>
-                        <td>Mathematics</td>
-                        <td>Year 7, Year 9</td>
-                        <td>Term 4, 2023</td>
-                    </tr>
-                    <tr>
-                        <td>Melba College</td>
-                        <td>Mathematics</td>
-                        <td>Year 7, Year 9, and Year 11</td>
-                        <td>Term 4, 2024</td>
-                    </tr>
-                    <tr>
-                        <td>Penola Catholic College</td>
-                        <td>Algorithms and Video Game Design, and ICT</td>
-                        <td>Year 10, and Year 12</td>
-                        <td>Term 3, 2025</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="placement-experience-table">
+                <table>
+                    <thead>
+                        <th>School</th>
+                        <th>Subjects Taught</th>
+                        <th>Year Level</th>
+                        <th>Term</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Prahran High School</td>
+                            <td>Mathematics</td>
+                            <td>Year 7, Year 9</td>
+                            <td>Term 4, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Melba College</td>
+                            <td>Mathematics</td>
+                            <td>Year 7, Year 9, and Year 11</td>
+                            <td>Term 4, 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Penola Catholic College</td>
+                            <td>Algorithms and Video Game Design, and ICT</td>
+                            <td>Year 10, and Year 12</td>
+                            <td>Term 3, 2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
 </body>

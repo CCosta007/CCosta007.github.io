@@ -1,0 +1,172 @@
+/*---------------------------------CSS for all pages---------------------------------------------------*/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(https://fonts.google.com/specimen/Montserrat);
+    }
+
+.menu-background{
+    background-color: rgba(255, 255, 255, 0.6); /* full white, with 0.6 opacity*/
+    backdrop-filter: blur(15px); /*add a blur effect so when words go behind the layer, they don't interfere with the nav bar*/
+    top:0;
+    padding:20px;
+    position: fixed;
+    width: 100%;
+}
+/*So the navigation list is at the top of the page, and stays in place when scrolling*/
+.nav-list{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 50px;
+    flex-grow: 1;
+    font-size: small;
+    white-space: nowrap; /* so text doesn't go to new line when browser size changes*/
+    overflow: hidden;
+    top:0;
+    width:90%;
+}
+/* nav menu text is now black, and has an underline when hovered over by mouse (using hover pseudoclass)*/
+.nav-list a{
+    text-decoration: none; 
+    color:black;
+}
+.nav-list a:hover{
+    text-decoration:underline;
+}
+
+body{
+    background-color: #F5F5F7; 
+    font-family: Montserrat; 
+    margin: 0;
+}
+/*-------------------------------CSS for index page-----------------------------------------------------*/
+
+.index-header h1{
+    color:#8a2be2; 
+    padding: 20px;
+}
+.index-main-content{
+    margin: 20px;
+}
+/*-----------------------------------CSS for about page-------------------------------------------------*/
+
+.placement-experience-table table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.placement-experience-table th,td {
+    border: 1px solid #ccc;
+    padding: 10px 12px; 
+    text-align: left;
+}
+.placement-experience-table thead{
+    background-color:#8a2be2;
+}
+.placement-experience-table th{
+    color:#FFF8DC;
+    font-weight:bold;
+}
+.placement-experience-table tr:nth-child(even){
+    background-color:#196f72;
+}
+.placement-experience-table td{
+    color:#1D1D1F;
+}
+.placement-experience-table h2{
+    font-family:'Courier New', Courier, monospace;
+    font-size:1.4rem;
+    margin-bottom: 8px;
+    color:#1D1D1F;
+}
+/*-----------------------------------CSS for teaching page-------------------------------------------------*/
+
+.teaching-philosophy{
+    background-color: #A4BEE8;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.1); 
+    color: 	#1D438A;
+    border-radius: 10px;
+    padding-top: 1px;
+    padding-bottom:1px;
+    text-align:center;
+    position:relative;
+    margin: 20px;
+}
+/*----------------------------------CSS for work sample page--------------------------------------------------*/
+
+.work-sample-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #eaf3f6;
+    gap: 20px;
+    margin: 20px;
+}
+.work-sample-card{
+    flex: 1 1 150px;
+    background-color: #A4BEE8;;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.1); 
+    color: 	#1D438A;
+    border-radius: 10px;
+    padding: 15px;
+    text-align:center;
+    position:relative;
+}
+
+/*-------------------------------------- CSS for contacts page----------------------------------------------*/
+
+/*CSS for modifying the contact me container. Used for experimentation purposes at this point*/
+.contact-container{
+    display:flex;
+    flex-direction: column;
+    background-color: #8a2be2;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.1); 
+    color: #21dd10;
+    border-radius: 10px;
+    text-align:left;
+    max-width: 250px;
+    position:relative;
+    margin: 20px;
+}
+.contact-container h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+.contact-container p{
+    margin-left: 20px;
+}
+
+/*------------------------------------CSS for projects page------------------------------------------------*/
+
+/*Section for showing projects or units that have I have taught using flexbox*/
+.project-card-flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px;
+}
+.project-card{
+    flex: 1 1 150px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+}
+.project-card img{
+    width: 100%;
+    height:auto;
+    border-radius: 4px;
+}
+.project-card h3{
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color:#2c3e50;
+}
+        
