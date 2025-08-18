@@ -53,6 +53,7 @@ body{
 .index-main-content{
     margin: 20px;
 }
+
 /*-----------------------------------CSS for about page-------------------------------------------------*/
 .about-header{
     background-color: #F0F0F0;
@@ -65,7 +66,6 @@ body{
     text-align: left;
     padding-left: 8rem;
     margin-bottom: 0;
-    
 }
 /*the placement overview title*/
 .about-main-content h2{
@@ -79,6 +79,9 @@ body{
     height: 45rem;
     background-color: #F0F0F0;
     padding-bottom: 1.5rem;
+}
+.about-main-content .banner-graphic-box img{
+    border-radius: 5rem;
 }
 
 .about-main-content img{
@@ -94,7 +97,7 @@ body{
     background-color: #F5F5F7; /*color of vertical line*/
     text-align: center;
     font-size: larger;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .about-main-content .main-text > * {
@@ -106,6 +109,7 @@ body{
 .about-main-content .main-text img{
     width:15rem;
     align-items: center;
+    border-radius: 1.5rem;
 }   
 
 .placement-experience-table table{
