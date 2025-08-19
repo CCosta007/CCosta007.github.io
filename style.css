@@ -74,6 +74,9 @@ body{
 /*the placement overview title*/
 .about-main-content h2{
     color:#21dd10;
+    text-align: center;
+    padding-top: 1.25rem;
+    grid-column: span 4;
 }
 
 .about-header .banner-graphic-box{
@@ -82,7 +85,7 @@ body{
     margin-bottom: 1rem;
     justify-content: center;
     align-items: center;
-    height: 50rem;
+    min-height: 48rem;
     background-color: #F0F0F0;
     padding-bottom: 1.5rem;
     border-radius: 5rem;
@@ -100,7 +103,7 @@ body{
 .about-main-content .main-text{
     display: grid;
     grid-template-columns: repeat(4,1fr); /*4 coloumns*/
-    grid-template-rows: repeat(4,1fr); /* 4 rows*/
+    grid-template-rows: 1fr; /* 1 row*/
     background-color: #F5F5F7; /*color of vertical line*/
     text-align: left;
     font-size: larger;
@@ -123,38 +126,39 @@ body{
 }   
 .about-main-content .main-text p{
    grid-column: span 2;
+ 
+}   
+.about-main-content .main-text a{
+   text-decoration: none;
+}   
+.about-main-content .main-text a:hover{
+   text-decoration:underline;
 }   
 
-.placement-experience-table table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+.about-main-content .placement-overview-section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr); /*4 coloumns*/
+    grid-template-rows: 1fr; /* 1 row*/
+    background-color: #F5F5F7; /*color of vertical line*/
+    margin:0;
+    border-radius: 1rem;
+    gap: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 1.25rem;
 }
-.placement-experience-table th,td {
-    border: 1px solid #ccc;
-    padding: 10px 12px; 
-    text-align: left;
+.about-main-content .placement-overview-section > * {
+    background-color: #F0F0F0;
+    margin:0;
+    border-radius: 1rem;
+    text-align: center;
 }
-.placement-experience-table thead{
-    background-color:#8a2be2;
+
+.about-footer {
+    text-align: center;
+    background-color: #F0F0F0;
 }
-.placement-experience-table th{
-    color:#FFF8DC;
-    font-weight:bold;
-}
-.placement-experience-table tr:nth-child(even){
-    background-color:#196f72;
-}
-.placement-experience-table td{
-    color:#1D1D1F;
-}
-.placement-experience-table h2{
-    font-family:'Courier New', Courier, monospace;
-    font-size:1.4rem;
-    margin-bottom: 8px;
-    color:#1D1D1F;
-}
+
 /*-----------------------------------CSS for teaching page-------------------------------------------------*/
 
 .teaching-header h1{
