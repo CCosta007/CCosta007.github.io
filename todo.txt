@@ -1,6 +1,6 @@
 TODO:
   About me page:
-    - Ensure banner picture scales with size and doesn't exceed the container
+    - Ensure banner picture scales with size and doesn't exceed the container (X)
     - Break up the text. Structure will look more like:
                 HEADER
                 some text (My name is Chase Costa and I am a university student studying a Bachelors degree in Education (Secondary) and Arts (Mathematics) at Australian Catholic University. Prior to studying education, I studied Computer Science at Monash University.)
