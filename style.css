@@ -10,6 +10,7 @@ body{
     font-family: Montserrat; 
     margin: 0px;
     color: #1D1D1F;
+
 }
 
 .menu-background{
@@ -73,9 +74,9 @@ body{
 }
 /*the placement overview title*/
 .about-main-content h2{
-    color:#21dd10;
+    color:#196f72;
     text-align: center;
-    padding-top: 1.25rem;
+    padding: 1.25rem;
     grid-column: span 4;
 }
 
@@ -126,7 +127,7 @@ body{
 }   
 .about-main-content .main-text p{
    grid-column: span 2;
- 
+    text-overflow: wrap;
 }   
 .about-main-content .main-text a{
    text-decoration: none;
@@ -152,12 +153,16 @@ body{
     margin:0;
     border-radius: 1rem;
     text-align: center;
+    text-overflow: wrap;
 }
 
-.about-footer {
+.about-footer p {
     text-align: center;
+    font-size: small;
     background-color: #F0F0F0;
+    margin-bottom: 0;
 }
+
 
 /*-----------------------------------CSS for teaching page-------------------------------------------------*/
 
