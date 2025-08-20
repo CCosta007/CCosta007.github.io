@@ -19,6 +19,7 @@ body > main,header{
 }
 body{
     margin-bottom: 0; /*so the footer doesn't have a gap underneath*/
+    margin-left: 0; /*so the footer doesn't have a gap to the left*/
 }
 
 .menu-background{
@@ -101,10 +102,11 @@ footer .footer-container {
     text-align: center;
     color: var(--heading-colour);
 }
+
 .index-main-content {
     display: grid; /*create a grid */
     grid-template-columns: 0.5fr 0.5fr; /*grid is 2 columns, both 0.5 fractional units wide*/
-    grid-template-rows: 1fr; /*grid is 1 row, 1 fractional unit wide*/
+    grid-template-rows: 1fr 1fr; /*grid is 1 row, 1 fractional unit wide*/
     border-radius: 1rem; /*rounded corners for the container*/
     gap:1rem; /* gap between columns in the grid */
     margin-top: 1.25rem; /*creates a margin at the top */
@@ -115,6 +117,11 @@ footer .footer-container {
     padding: 1.5rem; 
     margin:0;
     border-radius: 1rem;
+}
+.index-main-content .index-section-3{
+    grid-column: span 2;
+    background-color: var(--box-colour);
+    text-align: center;
 }
 
 .index-main-content ul, ol{
@@ -144,6 +151,7 @@ footer .footer-container {
     padding: 1.25rem;
     grid-column: span 4;
 }
+
 /*position the banner box*/
 .about-header .banner-graphic-box{
     display: flex;
@@ -188,9 +196,15 @@ footer .footer-container {
     width:15rem;
     border-radius: 1.5rem;
 }   
-.about-main-content .main-text p{
+/*center text within the photo boxes*/
+.about-main-content .main-text h5{
+    text-align: center;
+}
+.about-main-content .main-text ul{
     grid-column: span 2;
     text-overflow: wrap;
+    text-align: center;
+    list-style-type: none;
 }   
 .about-main-content .main-text a{
    text-decoration: none;
@@ -235,29 +249,33 @@ footer .footer-container {
     position:relative;
     margin: 20px;
 }
-/*----------------------------------CSS for work sample page--------------------------------------------------*/
-.work-sample-header h1{
-    color:#8a2be2;
-    padding: 20px;
+/*----------------------------------CSS for resume page--------------------------------------------------*/
+.resume-header{
+    background-color: var(--box-colour);
+    margin-top: 2.5rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
-.work-sample-container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    color: #eaf3f6;
-    gap: 20px;
-    margin: 20px;
+/*format the heading*/
+.resume-header h1{
+    color:var(--heading-colour);
+    text-align: center;
+}   
+.resume-header p{
+    text-align: left;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}  
+.resume-container{
+    background-color: var(--box-colour);
+    border-radius:1rem;
 }
-.work-sample-card{
-    flex: 1 1 150px;
-    background-color: #A4BEE8;;
-    box-shadow: 1px 2px 4px rgba(0,0,0,0.1); 
-    color: 	#1D438A;
-    border-radius: 10px;
-    padding: 15px;
-    text-align:center;
-    position:relative;
-}
+.resume-section-1 .resume-container img{
+    display:block;
+    border-radius: 1.5rem;
+    width: 100%;
+    height: auto;
+}   
 
 /*-------------------------------------- CSS for contacts page----------------------------------------------*/
 
