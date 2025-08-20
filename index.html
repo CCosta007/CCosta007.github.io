@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Chase's Teaching Portfolio - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
     <nav>
         <div class="menu-background">
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="teaching.html">Teaching Practice</a></li>
                 <li><a href="projects.html">Project Showcase</a></li>
@@ -25,16 +25,13 @@
     <!--Main Heading for the home page-->
     <header class="index-header">
         <h1>Chase's Teaching Portfolio</h1>
+        <img src="images/profile-picture-circle.png" alt="My Profile Photo. Smiling at the camera">
     </header>
 
     <!--the main content area of the homepage-->
     <main class="index-main-content">
-        <!--My profile photo section-->
-        <section>
-            <img src="images/profile-picture-circle.png" alt="My Profile Photo. Smiling at the camera" width="200px">
-        </section>
         <!--unordered list of my professional summary (section)-->
-        <section>
+        <section class="index-section-1">
             <h2>Professional Summary</h2>
             <ul>
                 <li>Digital Technologies and Mathematics Pre-Service Teacher</li>
@@ -42,8 +39,8 @@
             </ul>
         </section>
         <!--Ordered list that represents key milestones in my professional experience-->
-        <section>
-            <h3>Professional Journey</h3>
+        <section class="index-section-2">
+            <h2>Professional Journey</h2>
             <ol>
                 <li>Studied Computer Science at Monash University</li>
                 <li>Changed to a Bachelor's degree in Education (Secondary) / Arts(Mathematics) in 2022</li>
@@ -51,5 +48,8 @@
             </ol>
         </section>   
     </main>
+    <footer class="footer-container">
+        <p> &copy; 2025 Chase Costa. All rights reserved</p>
+    </footer>
 </body>
 </html> 

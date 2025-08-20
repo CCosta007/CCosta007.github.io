@@ -4,37 +4,46 @@
     font-family: 'Montserrat';
     src: url(https://fonts.google.com/specimen/Montserrat);
     }
-
-body{
-    background-color: #F5F5F7; 
-    font-family: Montserrat; 
+:root{
+    --box-colour: #F0F0F0; /*colour of the containers for info to go in*/
+    --main-font: Montserrat; /*main font used for text*/
+    --main-font-colour: #1D1D1F; 
+    --heading-colour: #196f72;
+}
+body > main,header{
+    font-family: var(--main-font);
     margin: 0px;
-    color: #1D1D1F;
-
+    color: var(--main-font-colour);
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+body{
+    margin-bottom: 0; /*so the footer doesn't have a gap underneath*/
 }
 
 .menu-background{
     background-color: rgba(255, 255, 255, 0.6); /* full white, with 0.6 opacity*/
     backdrop-filter: blur(15px); /*add a blur effect so when words go behind the layer, they don't interfere with the nav bar*/
-    top:0;
-    padding:20px;
-    position: fixed;
-    width: 100%;
+    top:0; /*so there is no gap above the navigation menu*/
+    padding:20px; /*layer of padding around the nav menu*/
+    position: fixed; /*allows the menu background to stay at top of page regardless of scrolling*/
+    width: 100%; /*background stretches across whole page*/
 }
 /*So the navigation list is at the top of the page, and stays in place when scrolling*/
 .nav-list{
     position: fixed;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
+    justify-content:center;
+    list-style-type: none; /*so list doesn't have bullets*/
     gap: 50px;
     flex-grow: 1;
     font-size: small;
     white-space: nowrap; /* so text doesn't go to new line when browser size changes*/
     overflow: hidden;
     top:0;
-    width:90%;
+    width:100vw; /*so it is the full viewport width*/
+    padding-left: 0;
+    font-family: var(--main-font);
 }
 /* nav menu text is now black, and has an underline when hovered over by mouse (using hover pseudoclass)*/
 .nav-list a{
@@ -42,44 +51,100 @@ body{
     color:black;
 }
 .nav-list a:hover{
-    text-decoration:underline;
+    text-decoration:underline; /* when hovering over the links on the nav, an underline will appear*/
+}
+.active{
+    font-weight: bold;
+}
+
+/*footer section taken from starter.css*/
+footer {
+    margin-top: 40px; /* Space above footer */
+    padding: 22px 0; /* Vertical spacing */
+    background: var(--box-colour); 
+}
+footer p {
+    color: var(--main-font-colour); 
+    font-family: var(--main-font);
+    text-align: center;
+}
+footer .footer-container {
+    width: min(100% - 2*var(--spacing), var(--maxw)); /* Responsive width */
+    margin: 0 auto; /* Centered container */
+    display: flex; /* Flex layout */
+    justify-content: space-between; /* Space between items */
+    gap: var(--spacing); /* Gap between items */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 /*-------------------------------CSS for index page-----------------------------------------------------*/
-
-.index-header h1{
-    color:#8a2be2; 
-    padding: 20px;
+.index-header{
+    border-bottom-left-radius: 1rem; /* bottom left corner is rounded*/
+    border-bottom-right-radius: 1rem; /* bottom left corner is rounded*/
+    background-color: var(--box-colour); /* container for header section is slightly off white */
 }
-.index-main-content{
-    margin: 20px;
+.index-header h1{
+    color: var(--heading-colour); 
+    padding: 20px;
+    text-align: center;
+}
+.index-header img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    width:15rem;
+
+}
+.index-main-content h2{
+    text-align: center;
+    color: var(--heading-colour);
+}
+.index-main-content {
+    display: grid; /*create a grid */
+    grid-template-columns: 0.5fr 0.5fr; /*grid is 2 columns, both 0.5 fractional units wide*/
+    grid-template-rows: 1fr; /*grid is 1 row, 1 fractional unit wide*/
+    border-radius: 1rem; /*rounded corners for the container*/
+    gap:1rem; /* gap between columns in the grid */
+    margin-top: 1.25rem; /*creates a margin at the top */
+    margin-bottom: 1.25rem; /*creates a margin at the bottom */
+}
+.index-main-content > *{
+    background-color: var(--box-colour);
+    padding: 1.5rem; 
+    margin:0;
+    border-radius: 1rem;
+}
+
+.index-main-content ul, ol{
+    list-style-type:disc; /*so list doesn't have bullets*/
 }
 
 /*-----------------------------------CSS for about page-------------------------------------------------*/
+/*format the header container*/
 .about-header{
-    background-color: #F0F0F0;
+    background-color: var(--box-colour);
     margin-top: 2.5rem;
     padding: 0;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
 }
-
+/*format the heading*/
 .about-header h1{
-    color:#196f72;
-    text-align: left;
-    padding-left: 8rem;
+    color:var(--heading-colour);
+    text-align: center;
     margin-bottom: 0;
 }
+
 /*the placement overview title*/
 .about-main-content h2{
-    color:#196f72;
+    color:var(--heading-colour);
     text-align: center;
     padding: 1.25rem;
     grid-column: span 4;
 }
-
+/*position the banner box*/
 .about-header .banner-graphic-box{
     display: flex;
     padding:0;
@@ -87,46 +152,44 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 48rem;
-    background-color: #F0F0F0;
     padding-bottom: 1.5rem;
     border-radius: 5rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
 }
+/*format the banner image*/
 .about-header .banner-graphic-box img{
     border-radius: 5rem;
     height:auto;
     width:auto;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
 }
 
 .about-main-content .main-text{
     display: grid;
     grid-template-columns: repeat(4,1fr); /*4 coloumns*/
     grid-template-rows: 1fr; /* 1 row*/
-    background-color: #F5F5F7; /*color of vertical line*/
     text-align: left;
     font-size: larger;
     gap: 1rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
 }
 
+/*applies the boxes to all tags in the main-text class*/
 .about-main-content .main-text > * {
-    background-color: #F0F0F0;
+    background-color: var(--box-colour);
     padding: 1.5rem;
     margin:0;
     border-radius: 1rem;
 }
 
 .about-main-content .main-text img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     width:15rem;
-    align-items: center;
     border-radius: 1.5rem;
 }   
 .about-main-content .main-text p{
-   grid-column: span 2;
+    grid-column: span 2;
     text-overflow: wrap;
 }   
 .about-main-content .main-text a{
@@ -140,27 +203,17 @@ body{
     display: grid;
     grid-template-columns: repeat(4,1fr); /*4 coloumns*/
     grid-template-rows: 1fr; /* 1 row*/
-    background-color: #F5F5F7; /*color of vertical line*/
     margin:0;
     border-radius: 1rem;
     gap: 1rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
     margin-top: 1.25rem;
 }
 .about-main-content .placement-overview-section > * {
-    background-color: #F0F0F0;
+    background-color: var(--box-colour);
     margin:0;
     border-radius: 1rem;
     text-align: center;
     text-overflow: wrap;
-}
-
-.about-footer p {
-    text-align: center;
-    font-size: small;
-    background-color: #F0F0F0;
-    margin-bottom: 0;
 }
 
 
