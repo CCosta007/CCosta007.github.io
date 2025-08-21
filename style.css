@@ -251,21 +251,33 @@ footer .footer-container {
 }
 /*----------------------------------CSS for resume page--------------------------------------------------*/
 .resume-header{
-    background-color: var(--box-colour);
     margin-top: 2.5rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    text-align: right;
 }
 /*format the heading*/
 .resume-header h1{
+    background-color: var(--box-colour);
     color:var(--heading-colour);
     text-align: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-bottom: 0rem;
+    padding-bottom: 1rem;
 }   
 .resume-header p{
+    display: inline-block;
+    background-color: var(--box-colour);
     text-align: left;
-    padding-bottom: 1.5rem;
-    padding-left: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
 }  
+.resume-header a{
+    color:#1D1D1F;
+}
+.resume-header a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
 .resume-container{
     background-color: var(--box-colour);
     border-radius:1rem;
