@@ -21,6 +21,7 @@ body > main,header{
 body{
     margin-bottom: 0; /*so the footer doesn't have a gap underneath*/
     margin-left: 0; /*so the footer doesn't have a gap to the left*/
+    margin-right: 0; /*so the footer doesn't have a gap to the right*/
 }
 
 .menu-background{
