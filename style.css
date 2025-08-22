@@ -9,6 +9,7 @@
     --main-font: Montserrat; /*main font used for text*/
     --main-font-colour: #1D1D1F; 
     --heading-colour: #196f72;
+    --shadow-1: 0.3rem 0.3rem 0.625rem rgba(0,0,0,0.2); /*trial and error to find these rem values*/;
 }
 body > main,header{
     font-family: var(--main-font);
@@ -83,6 +84,7 @@ footer .footer-container {
     border-bottom-left-radius: 1rem; /* bottom left corner is rounded*/
     border-bottom-right-radius: 1rem; /* bottom left corner is rounded*/
     background-color: var(--box-colour); /* container for header section is slightly off white */
+    box-shadow: var(--shadow-1);
 }
 .index-header h1{
     color: var(--heading-colour); 
@@ -117,6 +119,7 @@ footer .footer-container {
     padding: 1.5rem; 
     margin:0;
     border-radius: 1rem;
+    box-shadow: var(--shadow-1);
 }
 .index-main-content .index-section-3{
     grid-column: span 2;
@@ -136,6 +139,7 @@ footer .footer-container {
     padding: 0;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    box-shadow: var(--shadow-1);
 }
 /*format the heading*/
 .about-header h1{
@@ -170,6 +174,7 @@ footer .footer-container {
     width:auto;
     max-width: 80%;
     max-height: 80%;
+    box-shadow: var(--shadow-1);
 }
 
 .about-main-content .main-text{
@@ -187,6 +192,7 @@ footer .footer-container {
     padding: 1.5rem;
     margin:0;
     border-radius: 1rem;
+    box-shadow: var(--shadow-1);
 }
 
 .about-main-content .main-text img{
@@ -228,26 +234,59 @@ footer .footer-container {
     border-radius: 1rem;
     text-align: center;
     text-overflow: wrap;
+    box-shadow: var(--shadow-1);
 }
 
 
 /*-----------------------------------CSS for teaching page-------------------------------------------------*/
-
-.teaching-header h1{
-    color: #8a2be2; 
-    padding:20px;
+.teaching-header{
+    background-color: var(--box-colour);
+    margin-top: 2.5rem;
+    text-align: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-bottom: 0rem;
+    padding-bottom: 1rem;
+    box-shadow: var(--shadow-1);
 }
 
-.teaching-philosophy{
-    background-color: #A4BEE8;
-    box-shadow: 1px 2px 4px rgba(0,0,0,0.1); 
-    color: 	#1D438A;
-    border-radius: 10px;
-    padding-top: 1px;
-    padding-bottom:1px;
-    text-align:center;
-    position:relative;
-    margin: 20px;
+.teaching-header h1{
+    color:var(--heading-colour);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.teaching-section-1{
+    display: grid; /*create a grid */
+    grid-template-columns: 0.5fr 0.5fr; /*grid is 2 columns, both 0.5 fractional units wide*/
+    grid-template-rows: 1fr 1fr; /*grid is 1 row, 1 fractional unit wide*/
+    border-radius: 1rem; /*rounded corners for the container*/
+    gap:1rem; /* gap between columns in the grid */
+    margin-top: 1.25rem; /*creates a margin at the top */
+    margin-bottom: 1.25rem; /*creates a margin at the bottom */
+}
+.teaching-section-1 h2 {
+    color: var(--heading-colour);
+}
+.teaching-section-1 .teaching-philosophy{
+    background-color: var(--box-colour);
+    text-align: center;
+    border-radius: 1.5rem;
+    padding:1.5rem;
+    box-shadow: var(--shadow-1);
+}
+.teaching-section-1 .teaching-temp{
+    background-color: var(--box-colour);
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-1);
+}
+.teaching-section-1 .teaching-temp-2{
+    grid-column: span 2;
+    background-color: var(--box-colour);
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-1);
 }
 /*----------------------------------CSS for resume page--------------------------------------------------*/
 .resume-header{
@@ -263,6 +302,7 @@ footer .footer-container {
     border-bottom-right-radius: 1rem;
     margin-bottom: 0rem;
     padding-bottom: 1rem;
+    box-shadow: var(--shadow-1);
 }   
 .resume-header p{
     display: inline-block;
@@ -270,6 +310,7 @@ footer .footer-container {
     text-align: left;
     padding: 1.5rem;
     border-radius: 1rem;
+    box-shadow: var(--shadow-1);
 }  
 .resume-header a{
     color:#1D1D1F;
@@ -281,6 +322,7 @@ footer .footer-container {
 .resume-container{
     background-color: var(--box-colour);
     border-radius:1rem;
+    box-shadow: var(--shadow-1);
 }
 .resume-section-1 .resume-container img{
     display:block;
@@ -291,32 +333,48 @@ footer .footer-container {
 
 /*-------------------------------------- CSS for contacts page----------------------------------------------*/
 
+.contact-header{
+    background-color: var(--box-colour);
+    margin-top: 2.5rem;
+    text-align: center;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-bottom: 0rem;
+    padding-bottom: 1rem;
+    box-shadow: var(--shadow-1);
+}
 .contact-header h1{
-    color: rgb(255,140,60); 
-    padding: 20px;
-}
-/*CSS for modifying the contact me container. Used for experimentation purposes at this point*/
-.contact-container{
-    display:flex;
-    flex-direction: column;
-    background-color: #8a2be2;
-    box-shadow: 1px 2px 4px rgba(0,0,0,0.1); 
-    color: #21dd10;
-    border-radius: 10px;
-    text-align:left;
-    max-width: 250px;
-    position:relative;
-    margin: 20px;
-}
-.contact-container h3{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: 0px;
-    margin-left: 5px;
-}
-.contact-container p{
-    margin-left: 20px;
+    color:var(--heading-colour);
+    text-align: center;
+    margin-bottom: 0;
 }
 
+.contacts-section-1{
+    display: grid; /*create a grid */
+    grid-template-columns: 0.3333fr 0.3333fr 0.3333fr; /*grid is 3 columns, all 0.33 fractional units wide*/
+    grid-template-rows: 1fr 1fr; /*grid is 2 rows, 1 fractional unit wide*/
+    border-radius: 1rem; /*rounded corners for the container*/
+    gap:1rem; /* gap between columns in the grid */
+    margin-top: 1.25rem; /*creates a margin at the top */
+    margin-bottom: 1.25rem; /*creates a margin at the bottom */  
+}
+
+.contacts-section-1 .contact-temp{
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: var(--box-colour);
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-1);
+}
+.contacts-section-1 .contact-container{
+    grid-column: span 1;
+    grid-row: span 2;
+    background-color: var(--box-colour);
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-1);
+}
 /*------------------------------------CSS for projects page------------------------------------------------*/
 
 .projects-header h1{
@@ -337,7 +395,7 @@ footer .footer-container {
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-1);
 }
 .project-card img{
     width: 100%;
