@@ -86,21 +86,24 @@ footer .footer-container {
     border-bottom-right-radius: 1rem; /* bottom left corner is rounded*/
     background-color: var(--box-colour); /* container for header section is slightly off white */
     box-shadow: var(--shadow-1);
+    margin-bottom: 5rem;
 }
 .index-header h1{
     color: var(--heading-colour); 
-    padding: 20px;
+    padding-top: 1.25rem;
     text-align: center;
+    margin-bottom: 0;
 }
+
 .index-header img{
     display:block;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0;
     width:15rem;
-
 }
+
 .index-main-content h2{
     text-align: center;
     color: var(--heading-colour);
@@ -111,7 +114,8 @@ footer .footer-container {
     grid-template-columns: 0.5fr 0.5fr; /*grid is 2 columns, both 0.5 fractional units wide*/
     grid-template-rows: 1fr 1fr; /*grid is 1 row, 1 fractional unit wide*/
     border-radius: 1rem; /*rounded corners for the container*/
-    gap:1rem; /* gap between columns in the grid */
+    column-gap: 3rem; /* gap between columns in the grid */
+    row-gap: 5rem; /* gap between rows in the grid */
     margin-top: 1.25rem; /*creates a margin at the top */
     margin-bottom: 1.25rem; /*creates a margin at the bottom */
 }
@@ -122,14 +126,29 @@ footer .footer-container {
     border-radius: 1rem;
     box-shadow: var(--shadow-1);
 }
-.index-main-content .index-section-3{
-    grid-column: span 2;
-    background-color: var(--box-colour);
-    text-align: center;
+
+.index-main-content ul, ol {
+    list-style-type:disc; /*so list doesn't have bullets*/
 }
 
-.index-main-content ul, ol{
-    list-style-type:disc; /*so list doesn't have bullets*/
+.index-main-content li{
+    margin-bottom: 2rem;
+}
+
+.index-main-content .index-section-3{
+    grid-column: span 2;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    height:25rem;
+}
+.index-main-content .index-section-3 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-1);
+    object-fit: cover; /*so it doesn't strecth and distort*/
+    object-position: bottom center; /*part of the image we see*/
 }
 
 /*-----------------------------------CSS for about page-------------------------------------------------*/
@@ -165,8 +184,8 @@ footer .footer-container {
     justify-content: center;
     align-items: center;
     min-height: 48rem;
-    padding-bottom: 1.5rem;
     border-radius: 5rem;
+    margin-bottom: 5rem;
 }
 /*format the banner image*/
 .about-header .banner-graphic-box img{
@@ -181,38 +200,35 @@ footer .footer-container {
 .about-main-content .main-text{
     display: grid;
     grid-template-columns: repeat(4,1fr); /*4 coloumns*/
-    grid-template-rows: 1fr; /* 1 row*/
+    grid-template-rows: 0.5fr 1fr; /* 2 row*/
     text-align: left;
     font-size: larger;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 /*applies the boxes to all tags in the main-text class*/
-.about-main-content .main-text > * {
+.about-main-content .main-text > *{
     background-color: var(--box-colour);
     padding: 1.5rem;
     margin:0;
     border-radius: 1rem;
     box-shadow: var(--shadow-1);
+    margin-bottom: 5rem;
+    text-align: center;
+
+}
+.about-main-content .main-text .main-text-1 {
+    grid-column: span 2;
+    margin-bottom: 0;
+}
+.about-main-content .main-text .main-text-2 {
+    grid-column: span 2;
+    margin-bottom: 0;
+}
+.about-main-content .main-text .main-text-3 {
+    grid-column: span 4;
 }
 
-.about-main-content .main-text img{
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width:15rem;
-    border-radius: 1.5rem;
-}   
-/*center text within the photo boxes*/
-.about-main-content .main-text h5{
-    text-align: center;
-}
-.about-main-content .main-text ul{
-    grid-column: span 2;
-    text-overflow: wrap;
-    text-align: center;
-    list-style-type: none;
-}   
 .about-main-content .main-text a{
    text-decoration: none;
 }   
@@ -228,6 +244,7 @@ footer .footer-container {
     border-radius: 1rem;
     gap: 1rem;
     margin-top: 1.25rem;
+    margin-bottom: 5rem;
 }
 .about-main-content .placement-overview-section > * {
     background-color: var(--box-colour);
@@ -237,7 +254,29 @@ footer .footer-container {
     text-overflow: wrap;
     box-shadow: var(--shadow-1);
 }
+.about-main-content .about-section-3{
+    display: grid;
+    grid-template-columns: repeat(4,1fr); /*4 coloumns*/
+    grid-template-rows: 1fr; /* 1 row*/
+    text-align: left;
+    font-size: larger;
+    gap: 3rem;
+}
 
+.about-main-content .about-section-3 img{
+    margin-left: auto;
+    margin-right: auto;
+    width:15rem;
+    border-radius: 1.5rem;
+}   
+.about-main-content .about-section-3 > *{
+    background-color: var(--box-colour);
+    border-radius: 1rem;
+    text-align: center;
+    text-overflow: wrap;
+    box-shadow: var(--shadow-1);
+    grid-column: span 2;
+}
 
 /*-----------------------------------CSS for teaching page-------------------------------------------------*/
 .teaching-header{
@@ -246,7 +285,7 @@ footer .footer-container {
     text-align: center;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    margin-bottom: 0rem;
+    margin-bottom: 5rem;
     padding-bottom: 1rem;
     box-shadow: var(--shadow-1);
 }
@@ -262,7 +301,8 @@ footer .footer-container {
     grid-template-columns: 0.5fr 0.5fr; /*grid is 2 columns, both 0.5 fractional units wide*/
     grid-template-rows: 1fr 1fr; /*grid is 1 row, 1 fractional unit wide*/
     border-radius: 1rem; /*rounded corners for the container*/
-    gap:1rem; /* gap between columns in the grid */
+    column-gap: 3rem; /* gap between columns in the grid */
+    row-gap: 5rem; /* gap between rows in the grid */
     margin-top: 1.25rem; /*creates a margin at the top */
     margin-bottom: 1.25rem; /*creates a margin at the bottom */
 }
@@ -292,7 +332,7 @@ footer .footer-container {
 /*----------------------------------CSS for resume page--------------------------------------------------*/
 .resume-header{
     margin-top: 2.5rem;
-    text-align: right;
+    text-align: center;
 }
 /*format the heading*/
 .resume-header h1{
@@ -301,7 +341,7 @@ footer .footer-container {
     text-align: center;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    margin-bottom: 0rem;
+    margin-bottom: 2rem;
     padding-bottom: 1rem;
     box-shadow: var(--shadow-1);
 }   
@@ -312,6 +352,7 @@ footer .footer-container {
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-1);
+    margin-bottom: 3rem;
 }  
 .resume-header a{
     color:#1D1D1F;
@@ -340,9 +381,9 @@ footer .footer-container {
     text-align: center;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    margin-bottom: 0rem;
     padding-bottom: 1rem;
     box-shadow: var(--shadow-1);
+    margin-bottom: 5rem;
 }
 .contact-header h1{
     color:var(--heading-colour);
@@ -355,7 +396,8 @@ footer .footer-container {
     grid-template-columns: 0.3333fr 0.3333fr 0.3333fr; /*grid is 3 columns, all 0.33 fractional units wide*/
     grid-template-rows: 1fr 1fr; /*grid is 2 rows, 1 fractional unit wide*/
     border-radius: 1rem; /*rounded corners for the container*/
-    gap:1rem; /* gap between columns in the grid */
+    column-gap: 3rem; /* gap between columns in the grid */
+    row-gap: 5rem; /* gap between rows in the grid */
     margin-top: 1.25rem; /*creates a margin at the top */
     margin-bottom: 1.25rem; /*creates a margin at the bottom */  
 }
