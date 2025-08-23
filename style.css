@@ -1,9 +1,14 @@
 /*---------------------------------CSS for all pages---------------------------------------------------*/
-
+@media (max-width: 640px) { /* responsiveness for viewing on mobile
+*/
+nav .menu-background { flex-wrap: wrap; }
+nav ul { width: 100%; justify-content: center; }
+}
 @font-face {
     font-family: 'Montserrat';
     src: url(https://fonts.google.com/specimen/Montserrat);
     }
+
 :root{
     --box-colour: #F0F0F0; /*colour of the containers for info to go in*/
     --main-font: Montserrat; /*main font used for text*/
