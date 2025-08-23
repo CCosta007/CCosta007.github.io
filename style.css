@@ -9,7 +9,10 @@
     --main-font: Montserrat; /*main font used for text*/
     --main-font-colour: #1D1D1F; 
     --heading-colour: #196f72;
+    --regular-text-size: larger;
     --shadow-1: 0.3rem 0.3rem 0.625rem rgba(0,0,0,0.2); /*trial and error to find these rem values*/;
+    --gap-between: 5rem;
+    --gap-within: 3rem;
 }
 body > main,header{
     font-family: var(--main-font);
@@ -51,7 +54,7 @@ body{
 /* nav menu text is now black, and has an underline when hovered over by mouse (using hover pseudoclass)*/
 .nav-list a{
     text-decoration: none; 
-    color:black;
+    color: var(--main-font-colour);
 }
 .nav-list a:hover{
     text-decoration:underline; /* when hovering over the links on the nav, an underline will appear*/
@@ -86,7 +89,7 @@ footer .footer-container {
     border-bottom-right-radius: 1rem; /* bottom left corner is rounded*/
     background-color: var(--box-colour); /* container for header section is slightly off white */
     box-shadow: var(--shadow-1);
-    margin-bottom: 5rem;
+    margin-bottom: var(--gap-between);
 }
 .index-header h1{
     color: var(--heading-colour); 
@@ -114,8 +117,8 @@ footer .footer-container {
     grid-template-columns: 0.5fr 0.5fr; /*grid is 2 columns, both 0.5 fractional units wide*/
     grid-template-rows: 1fr 1fr; /*grid is 1 row, 1 fractional unit wide*/
     border-radius: 1rem; /*rounded corners for the container*/
-    column-gap: 3rem; /* gap between columns in the grid */
-    row-gap: 5rem; /* gap between rows in the grid */
+    column-gap: var(--gap-within); /* gap between columns in the grid */
+    row-gap: var(--gap-between); /* gap between rows in the grid */
     margin-top: 1.25rem; /*creates a margin at the top */
     margin-bottom: 1.25rem; /*creates a margin at the bottom */
 }
@@ -129,6 +132,7 @@ footer .footer-container {
 
 .index-main-content ul, ol {
     list-style-type:disc; /*so list doesn't have bullets*/
+    font-size: var(--regular-text-size);
 }
 
 .index-main-content li{
@@ -185,7 +189,7 @@ footer .footer-container {
     align-items: center;
     min-height: 48rem;
     border-radius: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: var(--gap-between);
 }
 /*format the banner image*/
 .about-header .banner-graphic-box img{
@@ -202,7 +206,7 @@ footer .footer-container {
     grid-template-columns: repeat(4,1fr); /*4 coloumns*/
     grid-template-rows: 0.5fr 1fr; /* 2 row*/
     text-align: left;
-    font-size: larger;
+    font-size: var(--regular-text-size);
     gap: 1.25rem;
 }
 
@@ -213,14 +217,18 @@ footer .footer-container {
     margin:0;
     border-radius: 1rem;
     box-shadow: var(--shadow-1);
-    margin-bottom: 5rem;
+    margin-bottom: var(--gap-between);
     text-align: center;
-
+}
+.about-main-content .main-text a{
+    color: var(--main-font-colour);
+    text-decoration:underline;
 }
 .about-main-content .main-text .main-text-1 {
     grid-column: span 2;
     margin-bottom: 0;
 }
+
 .about-main-content .main-text .main-text-2 {
     grid-column: span 2;
     margin-bottom: 0;
@@ -228,13 +236,6 @@ footer .footer-container {
 .about-main-content .main-text .main-text-3 {
     grid-column: span 4;
 }
-
-.about-main-content .main-text a{
-   text-decoration: none;
-}   
-.about-main-content .main-text a:hover{
-   text-decoration:underline;
-}   
 
 .about-main-content .placement-overview-section{
     display: grid;
@@ -244,7 +245,7 @@ footer .footer-container {
     border-radius: 1rem;
     gap: 1rem;
     margin-top: 1.25rem;
-    margin-bottom: 5rem;
+    margin-bottom: var(--gap-between);
 }
 .about-main-content .placement-overview-section > * {
     background-color: var(--box-colour);
@@ -259,8 +260,8 @@ footer .footer-container {
     grid-template-columns: repeat(4,1fr); /*4 coloumns*/
     grid-template-rows: 1fr; /* 1 row*/
     text-align: left;
-    font-size: larger;
-    gap: 3rem;
+    font-size: var(--regular-text-size);
+    gap: var(--gap-within);
 }
 
 .about-main-content .about-section-3 img{
@@ -285,7 +286,7 @@ footer .footer-container {
     text-align: center;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: var(--gap-between);
     padding-bottom: 1rem;
     box-shadow: var(--shadow-1);
 }
@@ -301,10 +302,13 @@ footer .footer-container {
     grid-template-columns: 0.5fr 0.5fr; /*grid is 2 columns, both 0.5 fractional units wide*/
     grid-template-rows: 1fr 1fr; /*grid is 1 row, 1 fractional unit wide*/
     border-radius: 1rem; /*rounded corners for the container*/
-    column-gap: 3rem; /* gap between columns in the grid */
-    row-gap: 5rem; /* gap between rows in the grid */
+    column-gap: var(--gap-within); /* gap between columns in the grid */
+    row-gap: var(--gap-between); /* gap between rows in the grid */
     margin-top: 1.25rem; /*creates a margin at the top */
     margin-bottom: 1.25rem; /*creates a margin at the bottom */
+}
+.teaching-section-1 p{
+    font-size: var(--regular-text-size);
 }
 .teaching-section-1 h2 {
     color: var(--heading-colour);
@@ -352,7 +356,8 @@ footer .footer-container {
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-1);
-    margin-bottom: 3rem;
+    margin-bottom: var(--gap-within);
+    font-size: var(--regular-text-size);
 }  
 .resume-header a{
     color:#1D1D1F;
@@ -383,7 +388,7 @@ footer .footer-container {
     border-bottom-right-radius: 1rem;
     padding-bottom: 1rem;
     box-shadow: var(--shadow-1);
-    margin-bottom: 5rem;
+    margin-bottom: var(--gap-between);
 }
 .contact-header h1{
     color:var(--heading-colour);
@@ -396,10 +401,13 @@ footer .footer-container {
     grid-template-columns: 0.3333fr 0.3333fr 0.3333fr; /*grid is 3 columns, all 0.33 fractional units wide*/
     grid-template-rows: 1fr 1fr; /*grid is 2 rows, 1 fractional unit wide*/
     border-radius: 1rem; /*rounded corners for the container*/
-    column-gap: 3rem; /* gap between columns in the grid */
-    row-gap: 5rem; /* gap between rows in the grid */
+    column-gap: var(--gap-within); /* gap between columns in the grid */
+    row-gap: var(--gap-between); /* gap between rows in the grid */
     margin-top: 1.25rem; /*creates a margin at the top */
     margin-bottom: 1.25rem; /*creates a margin at the bottom */  
+}
+.contacts-section-1 p{
+    font-size:var(--regular-text-size);
 }
 
 .contacts-section-1 .contact-temp{
