@@ -1,9 +1,5 @@
 /*---------------------------------CSS for all pages---------------------------------------------------*/
-@media (max-width: 640px) { /* responsiveness for viewing on mobile
-*/
-nav .menu-background { flex-wrap: wrap; }
-nav ul { width: 100%; justify-content: center; }
-}
+
 @font-face {
     font-family: 'Montserrat';
     src: url(https://fonts.google.com/specimen/Montserrat);
@@ -13,8 +9,8 @@ nav ul { width: 100%; justify-content: center; }
     --box-colour: #F0F0F0; /*colour of the containers for info to go in*/
     --main-font: Montserrat; /*main font used for text*/
     --main-font-colour: #1D1D1F; 
-    --heading-colour: #196f72;
-    --regular-text-size: larger;
+    --heading-colour: #196f72; 
+    --regular-text-size: larger;    /*the size for content text in a paragraph */
     --shadow-1: 0.3rem 0.3rem 0.625rem rgba(0,0,0,0.2); /*trial and error to find these rem values*/;
     --gap-between: 5rem;
     --gap-within: 3rem;
@@ -30,6 +26,7 @@ body{
     margin-bottom: 0; /*so the footer doesn't have a gap underneath*/
     margin-left: 0; /*so the footer doesn't have a gap to the left*/
     margin-right: 0; /*so the footer doesn't have a gap to the right*/
+    background-color: #FAFAFA; /*background is an off-white for a subtle contrast with the containers without being too harsh*/
 }
 
 .menu-background{
@@ -66,6 +63,10 @@ body{
 }
 .active{
     font-weight: bold;
+}
+@media (max-width: 640px) { /* responsiveness for viewing on mobile*/
+    nav .menu-background { flex-wrap: wrap; }
+    nav ul { width: 100%; justify-content: center; }
 }
 
 /*footer section taken from starter.css*/
@@ -229,6 +230,10 @@ footer .footer-container {
     color: var(--main-font-colour);
     text-decoration:underline;
 }
+.about-main-content .main-text a:hover{
+    font-weight: bold;
+}
+
 .about-main-content .main-text .main-text-1 {
     grid-column: span 2;
     margin-bottom: 0;
@@ -259,22 +264,19 @@ footer .footer-container {
     text-align: center;
     text-overflow: wrap;
     box-shadow: var(--shadow-1);
+    padding: 1.5rem;
+}
+.about-main-content .placement-overview-section p {
+    font-size: var(--regular-text-size);
 }
 .about-main-content .about-section-3{
     display: grid;
     grid-template-columns: repeat(4,1fr); /*4 coloumns*/
     grid-template-rows: 1fr; /* 1 row*/
     text-align: left;
-    font-size: var(--regular-text-size);
     gap: var(--gap-within);
 }
 
-.about-main-content .about-section-3 img{
-    margin-left: auto;
-    margin-right: auto;
-    width:15rem;
-    border-radius: 1.5rem;
-}   
 .about-main-content .about-section-3 > *{
     background-color: var(--box-colour);
     border-radius: 1rem;
@@ -282,7 +284,22 @@ footer .footer-container {
     text-overflow: wrap;
     box-shadow: var(--shadow-1);
     grid-column: span 2;
+    padding: 1.5rem;
 }
+.about-main-content .about-section-3 h2{
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top:0;
+}
+.about-main-content .about-section-3 p{
+    font-size: var(--regular-text-size);
+}
+.about-main-content .about-section-3 img{
+    margin-left: auto;
+    margin-right: auto;
+    width:15rem;
+    border-radius: 1.5rem;
+}   
 
 /*-----------------------------------CSS for teaching page-------------------------------------------------*/
 .teaching-header{
@@ -404,19 +421,26 @@ footer .footer-container {
 .contacts-section-1{
     display: grid; /*create a grid */
     grid-template-columns: 0.3333fr 0.3333fr 0.3333fr; /*grid is 3 columns, all 0.33 fractional units wide*/
-    grid-template-rows: 1fr 1fr; /*grid is 2 rows, 1 fractional unit wide*/
+    grid-template-rows: 0.3333fr 0.3333fr 0.3333fr; /*grid is 3 rows, 0.33 fractional unit wide*/
     border-radius: 1rem; /*rounded corners for the container*/
     column-gap: var(--gap-within); /* gap between columns in the grid */
-    row-gap: var(--gap-between); /* gap between rows in the grid */
+    row-gap: var(--gap-within); /* gap between rows in the grid. Used 'gap-within' here as they are related elements, and wanted them to appear so */
     margin-top: 1.25rem; /*creates a margin at the top */
     margin-bottom: 1.25rem; /*creates a margin at the bottom */  
 }
 .contacts-section-1 p{
     font-size:var(--regular-text-size);
+    padding: 1.5rem;
 }
-
-.contacts-section-1 .contact-temp{
+.contacts-section-1 .contact-form{
     grid-column: span 2;
+    background-color: var(--box-colour);
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-1);
+}
+.contacts-section-1 .contact-general-message{
+    grid-column: span 3;
     grid-row: span 2;
     background-color: var(--box-colour);
     text-align: center;
@@ -425,7 +449,6 @@ footer .footer-container {
 }
 .contacts-section-1 .contact-container{
     grid-column: span 1;
-    grid-row: span 2;
     background-color: var(--box-colour);
     text-align: center;
     border-radius: 1.5rem;
