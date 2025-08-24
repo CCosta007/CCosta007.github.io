@@ -322,7 +322,7 @@ footer .footer-container {
 .teaching-section-1{
     display: grid; /*create a grid */
     grid-template-columns: 0.5fr 0.5fr; /*grid is 2 columns, both 0.5 fractional units wide*/
-    grid-template-rows: 1fr 1fr; /*grid is 1 row, 1 fractional unit wide*/
+    grid-template-rows: 0.5fr 0.5fr; /*grid is 2 rows, 0.5 fractional units wide*/
     border-radius: 1rem; /*rounded corners for the container*/
     column-gap: var(--gap-within); /* gap between columns in the grid */
     row-gap: var(--gap-between); /* gap between rows in the grid */
@@ -331,9 +331,12 @@ footer .footer-container {
 }
 .teaching-section-1 p{
     font-size: var(--regular-text-size);
+    margin-top: 0;
+    padding-top: 1rem;
 }
 .teaching-section-1 h2 {
     color: var(--heading-colour);
+    margin-bottom: 0;
 }
 .teaching-section-1 .teaching-philosophy{
     background-color: var(--box-colour);
@@ -342,18 +345,37 @@ footer .footer-container {
     padding:1.5rem;
     box-shadow: var(--shadow-1);
 }
-.teaching-section-1 .teaching-temp{
+.teaching-section-1 .teaching-philosophy img{
+    width:80%;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-1);
+}
+.teaching-section-1 .teaching-core-values{
     background-color: var(--box-colour);
     text-align: center;
     border-radius: 1.5rem;
     box-shadow: var(--shadow-1);
+    padding: 1.5rem;
 }
-.teaching-section-1 .teaching-temp-2{
+
+.teaching-section-1 .teaching-core-values dl{
+    font-size: var(--regular-text-size);
+}
+/* lets the value stand out*/
+.teaching-section-1 .teaching-core-values dt{
+    font-weight: bold;
+}
+/* so there is a gap between the value and the description*/
+.teaching-section-1 .teaching-core-values dd{ 
+    padding: 1rem; 
+}
+.teaching-section-1 .behavioural-management{
     grid-column: span 2;
     background-color: var(--box-colour);
     text-align: center;
     border-radius: 1.5rem;
     box-shadow: var(--shadow-1);
+    padding: 1.5rem;
 }
 /*----------------------------------CSS for resume page--------------------------------------------------*/
 .resume-header{
