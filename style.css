@@ -472,6 +472,12 @@ footer .footer-container {
     box-shadow: var(--shadow-1);
 }
 
+.contacts-section-1 .contact-form h2 {
+    color: var(--heading-colour);
+}
+.contacts-section-1 .contact-container h2 {
+    color: var(--heading-colour);
+}
 label{
     display: block;
     padding: 0.5rem;
