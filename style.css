@@ -14,6 +14,7 @@
     --shadow-1: 0.3rem 0.3rem 0.625rem rgba(0,0,0,0.2); /*trial and error to find these rem values*/;
     --gap-between: 5rem;
     --gap-within: 3rem;
+    --the-background-color: #FAFAFA;
 }
 body > main,header{
     font-family: var(--main-font);
@@ -26,7 +27,7 @@ body{
     margin-bottom: 0; /*so the footer doesn't have a gap underneath*/
     margin-left: 0; /*so the footer doesn't have a gap to the left*/
     margin-right: 0; /*so the footer doesn't have a gap to the right*/
-    background-color: #FAFAFA; /*background is an off-white for a subtle contrast with the containers without being too harsh*/
+    background-color: var(--the-background-color); /*background is an off-white for a subtle contrast with the containers without being too harsh*/
 }
 
 .menu-background{
@@ -297,8 +298,9 @@ footer .footer-container {
 .about-main-content .about-section-3 img{
     margin-left: auto;
     margin-right: auto;
-    width:15rem;
+    width:100%;
     border-radius: 1.5rem;
+    box-shadow: var(--shadow-1);
 }   
 
 /*-----------------------------------CSS for teaching page-------------------------------------------------*/
@@ -439,7 +441,15 @@ footer .footer-container {
     text-align: center;
     margin-bottom: 0;
 }
-
+.contacts-section-1 .contact-general-message{
+    grid-column: span 3;
+    grid-row: span 2;
+    background-color: var(--box-colour);
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-1);
+    place-content: center;
+}
 .contacts-section-1{
     display: grid; /*create a grid */
     grid-template-columns: 0.3333fr 0.3333fr 0.3333fr; /*grid is 3 columns, all 0.33 fractional units wide*/
@@ -461,14 +471,64 @@ footer .footer-container {
     border-radius: 1.5rem;
     box-shadow: var(--shadow-1);
 }
-.contacts-section-1 .contact-general-message{
-    grid-column: span 3;
-    grid-row: span 2;
-    background-color: var(--box-colour);
-    text-align: center;
-    border-radius: 1.5rem;
+
+label{
+    display: block;
+    padding: 0.5rem;
+}
+input[type=text], select{
+    width:90%;
+    background-color: var(--the-background-color);   
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: var(--main-font);
     box-shadow: var(--shadow-1);
 }
+input[type=email]{
+    width:90%;
+    background-color: var(--the-background-color);   
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: var(--main-font);
+    box-shadow: var(--shadow-1);
+}
+
+
+input[type=text]:hover, input[type=email]:hover, textarea:hover{
+    background-color: #f0f8ff;
+    outline: none; /* so there is no outline when a contact field is clicked*/
+}
+
+textarea {
+    width:90%;
+    height:10rem;
+    background-color: var(--the-background-color);   
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    resize:none;
+    font-family: var(--main-font);
+    box-shadow: var(--shadow-1);
+}
+button{
+    display:block;
+    margin:1rem auto; /* 1rem sets the top and bottom margin to 1, the auto automatically caluclates equal left and right margins*/
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-1);
+    background-color: var(--the-background-color);
+    font-family: var(--main-font);
+    border: none;
+}
+button:hover{
+    background-color: #f0f8ff;
+}
+fieldset{
+    border: none;
+}
+
 .contacts-section-1 .contact-container{
     grid-column: span 1;
     background-color: var(--box-colour);
