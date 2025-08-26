@@ -475,13 +475,14 @@ footer .footer-container {
 .contacts-section-1 .contact-form h2 {
     color: var(--heading-colour);
 }
-.contacts-section-1 .contact-container h2 {
+.contacts-section-1 .contact-container-socials h2 {
     color: var(--heading-colour);
 }
 label{
     display: block;
     padding: 0.5rem;
 }
+
 input[type=text], select{
     width:90%;
     background-color: var(--the-background-color);   
@@ -535,12 +536,15 @@ fieldset{
     border: none;
 }
 
-.contacts-section-1 .contact-container{
+.contacts-section-1 .contact-container-socials{
     grid-column: span 1;
     background-color: var(--box-colour);
     text-align: center;
     border-radius: 1.5rem;
     box-shadow: var(--shadow-1);
+}
+.contacts-section-1 .contact-container-socials img{
+    width:30%;
 }
 /*------------------------------------CSS for projects page------------------------------------------------*/
 
