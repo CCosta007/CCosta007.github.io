@@ -15,7 +15,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="teaching.html">Teaching Practice</a></li>
-                <li><a href="projects.html">Project Showcase</a></li>
+                <li><a href="resources.html">Resources</a></li>
                 <li><a class="active" href="resume.html">Resume</a></li>
                 <li><a href="contacts.html">Contact Me</a></li>
             </ul>
@@ -24,13 +24,18 @@
     <!--Main Heading for the resume page-->
     <header class="resume-header">
         <h1>Resume</h1>
-        <p><a href="images/chase-resume-document.pdf" download="chase's resume">download here (PDF)</a></p>
     </header>
     <main>
         <!--Resume within a flexbox container. The direction is columns (down the page)-->
         <section class="resume-section-1">
+            <div class="resume-download">
+                <a href="images/chase-resume-document.pdf" download="chase's resume" type="application/pdf" aria-label="download resume PDF" target="_blank" rel="noopener">download PDF here, or click on it below!</a>
+            </div>
             <div class="resume-container">
-                <img src="images/chase-resume.png">
+                <figure>
+                    <a href="images/chase-resume-document.pdf" download="chase's resume" type="application/pdf" aria-label="download resume PDF" target="_blank" rel="noopener"><img src="images/chase-resume.png"></a>
+                    <figcaption>PDF <strong>Resume</strong> Download</figcaption>
+                </figure>
             </div>
         </section>
     </main>
