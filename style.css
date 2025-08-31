@@ -12,16 +12,17 @@
     --heading-colour: #196f72; 
     --regular-text-size: larger;    /*the size for content text in a paragraph */
     --shadow-1: 0.3rem 0.3rem 0.625rem rgba(0,0,0,0.2); /*trial and error to find these rem values*/;
-    --gap-between: 5rem;
-    --gap-within: 3rem;
-    --the-background-color: #FAFAFA;
+    --gap-between: 5rem; /*the gap between different sections so users know it is seperate to other sections*/
+    --gap-within: 3rem; /*gap within sections to make the content more comfortable for users. Page is more scannable*/
+    --the-background-color: #FAFAFA; /*background colour is a off-white to reduce eye strain, make the pages feel more inviting, and contrast well with the containers*/
+    --hover-scale-factor: scale(1.02); /* makes the size of the element 2% bigger when the cursor is hovering over it*/
 }
 body > main,header{
     font-family: var(--main-font);
     margin: 0px;
     color: var(--main-font-colour);
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 10rem; /*ensures there is a margin on left side of every page*/
+    margin-right: 10rem; /*ensures there is a margin on right side of every page*/
 }
 body{
     margin-bottom: 0; /*so the footer doesn't have a gap underneath*/
@@ -29,7 +30,9 @@ body{
     margin-right: 0; /*so the footer doesn't have a gap to the right*/
     background-color: var(--the-background-color); /*background is an off-white for a subtle contrast with the containers without being too harsh*/
 }
-
+body h1,h2,h3,h4,h5,h6 {
+    color: var(--heading-colour); /*all headings will have the same colour*/
+}
 .menu-background{
     background-color: rgba(255, 255, 255, 0.6); /* full white, with 0.6 opacity*/
     backdrop-filter: blur(15px); /*add a blur effect so when words go behind the layer, they don't interfere with the nav bar*/
@@ -38,13 +41,13 @@ body{
     position: fixed; /*allows the menu background to stay at top of page regardless of scrolling*/
     width: 100%; /*background stretches across whole page*/
 }
-/*So the navigation list is at the top of the page, and stays in place when scrolling*/
+
 .nav-list{
-    position: fixed;
-    display: flex;
+    position: fixed; /*So the navigation list is at the top of the page, and stays in place when scrolling*/
+    display: flex; /*so it goes across the page*/
     justify-content:center;
     list-style-type: none; /*so list doesn't have bullets*/
-    gap: 50px;
+    gap: 3.125rem; /*used online converter from 50 px to have gap be relative*/
     flex-grow: 1;
     font-size: small;
     white-space: nowrap; /* so text doesn't go to new line when browser size changes*/
@@ -63,7 +66,7 @@ body{
     text-decoration:underline; /* when hovering over the links on the nav, an underline will appear*/
 }
 .active{
-    font-weight: bold;
+    font-weight: bold; 
 }
 @media (max-width: 640px) { /* responsiveness for viewing on mobile*/
     nav .menu-background { flex-wrap: wrap; }
@@ -83,7 +86,7 @@ footer p {
 }
 footer .footer-container {
     width: min(100% - 2*var(--spacing), var(--maxw)); /* Responsive width */
-    margin: 0 auto; /* Centered container */
+    margin: 0 auto; /*top and bottom margins are 0, left and right margins are divided equally to both sides*/
     display: flex; /* Flex layout */
     justify-content: space-between; /* Space between items */
     gap: var(--spacing); /* Gap between items */
@@ -99,7 +102,6 @@ footer .footer-container {
     margin-bottom: var(--gap-between);
 }
 .index-header h1{
-    color: var(--heading-colour); 
     padding-top: 1.25rem;
     text-align: center;
     margin-bottom: 0;
@@ -116,7 +118,7 @@ footer .footer-container {
 
 .index-main-content h2{
     text-align: center;
-    color: var(--heading-colour);
+
 }
 
 .index-main-content {
@@ -174,14 +176,13 @@ footer .footer-container {
 }
 /*format the heading*/
 .about-header h1{
-    color:var(--heading-colour);
+
     text-align: center;
     margin-bottom: 0;
 }
 
 /*the placement overview title*/
 .about-main-content h2{
-    color:var(--heading-colour);
     text-align: center;
     padding: 1.25rem;
     grid-column: span 4;
@@ -228,11 +229,13 @@ footer .footer-container {
     text-align: center;
 }
 .about-main-content .main-text a{
+    display:inline-block;
     color: var(--main-font-colour);
     text-decoration:underline;
 }
 .about-main-content .main-text a:hover{
     font-weight: bold;
+    transform: var(--hover-scale-factor);
 }
 
 .about-main-content .main-text .main-text-1 {
@@ -314,7 +317,6 @@ footer .footer-container {
 }
 
 .teaching-header h1{
-    color:var(--heading-colour);
     text-align: center;
     margin-bottom: 0;
 }
@@ -335,7 +337,6 @@ footer .footer-container {
     padding-top: 1rem;
 }
 .teaching-section-1 h2 {
-    color: var(--heading-colour);
     margin-bottom: 0;
 }
 .teaching-section-1 .teaching-philosophy{
@@ -385,7 +386,6 @@ footer .footer-container {
 /*format the heading*/
 .resume-header h1{
     background-color: var(--box-colour);
-    color:var(--heading-colour);
     text-align: center;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -393,34 +393,35 @@ footer .footer-container {
     padding-bottom: 1rem;
     box-shadow: var(--shadow-1);
 }   
-
 .resume-section-1 a{
+    display: inline-block;
     color:#1D1D1F;
 }
 .resume-section-1 a:hover{
     text-decoration: underline;
     font-weight: bold;
+    transform: var(--hover-scale-factor);
 }
 .resume-section-1{
     display: flex;
     flex-direction: column;
 }
-.resume-section-1 .resume-download{
+.resume-download{
     margin-bottom: var(--gap-between);
     margin-top: var(--gap-between);
     text-align: center;
     font-size: var(--regular-text-size);  /*unsure why the font-size isn't inherited by the main section as defined at the top of the css*/
 }
-.resume-section-1 .resume-download a{
+.resume-download a{
     background-color: var(--box-colour);
     border-radius:1rem;
     box-shadow: var(--shadow-1);
     padding:1.5rem;
 }
-.resume-section-1 .resume-container a{
+.resume-container a{
     display:contents; /*ignores the box generated by the <a> tag, so <img> defines the clicabkle area*/
 }
-.resume-section-1 .resume-container img{
+.resume-container img{
     background-color: var(--box-colour);
     border-radius:1rem;
     box-shadow: var(--shadow-1);
@@ -429,7 +430,10 @@ footer .footer-container {
     display:block;
     margin-left: auto;
     margin-right: auto;
-}   
+} 
+.resume-container img:hover{  
+    transform: var(--hover-scale-factor);
+}
 figcaption{
     text-align: center;
     margin-top: 1rem;
@@ -446,7 +450,6 @@ figcaption{
     margin-bottom: var(--gap-between);
 }
 .contact-header h1{
-    color:var(--heading-colour);
     text-align: center;
     margin-bottom: 0;
 }
@@ -485,12 +488,7 @@ figcaption{
     text-align: left;
     margin-left: 1.5rem;
 }
-.contacts-section-1 .contact-form h2 {
-    color: var(--heading-colour);
-}
-.contacts-section-1 .contact-container-socials h2 {
-    color: var(--heading-colour);
-}
+
 label{
     display: block;
     padding: 0.5rem;
@@ -524,7 +522,11 @@ input[type=email]{
 input[type=text]:hover, input[type=email]:hover, textarea:hover{
     background-color: #f0f8ff;
     outline: none; /* so there is no outline when a contact field is clicked*/
-
+    transform: var(--hover-scale-factor);
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+    outline: none; /*so there is no outline when input field is clicked and cursor is not hovering over it*/
+    background-color: #f0f8ff; /*keeps background colour when input field has been clicked and cursor is not hovering over it*/
 }
 
 textarea {
@@ -554,16 +556,19 @@ button:hover{
 fieldset{
     border: none;
 }
-.contacts-section-1 .contact-container-socials{
+.contact-container-socials{
     grid-column: span 1;
     background-color: var(--box-colour);
     text-align: center;
     border-radius: 1.5rem;
     box-shadow: var(--shadow-1);
 }
-.contacts-section-1 .contact-container-socials img{
+.contact-container-socials img{
     width: 10rem;
     height:10rem;
+}
+.contact-container-socials img:hover{
+    transform: scale(1.2); /*didnt use the variable hover-scale-factor here because I want the images to be bigger when hovered over*/
 }
 
 /*-------------------------------------- CSS for resources page----------------------------------------------*/
@@ -579,7 +584,6 @@ fieldset{
     margin-bottom: var(--gap-between);
 }
 .resources-header h1{
-    color:var(--heading-colour);
     text-align: center;
     margin-bottom: 0;
 }
@@ -603,10 +607,26 @@ fieldset{
     grid-template-rows: repeat(4,0.25fr); /*4 rows, 0.25fr wide*/
     column-gap: var(--gap-within);
 }
-.card-grid .card{
+.card{
     background-color: var(--box-colour);
     border-radius:1rem;
     box-shadow: var(--shadow-1);
     padding:1.5rem;
     grid-row: span 4;
+    grid-column: span 2;
+    margin-bottom: var(--gap-within);
+}
+.card img{
+    display: block; /* to allow the images to be center of container*/
+    margin: 0 auto; /*top and bottom margins are 0, left and right margins are divided equally to both sides*/
+    max-width: 100%;
+    max-height: 50%;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-1);
+}
+.card-content{
+    text-align: center;
+}
+.card img:hover{
+    transform: var(--hover-scale-factor); 
 }
