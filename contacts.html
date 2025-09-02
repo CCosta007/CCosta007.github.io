@@ -36,11 +36,11 @@
                 <form id="contact-form" action="https://formsubmit.co/2e9a9c0c4869997a1be141aaa6e622c5" method="post" autocomplete="on">
                     <h3> Reason for contact:</h3>
                     <div class="radio-buttons">       
-                        <input type="radio" id="contact-choice-1" name="contact" value="question">
+                        <input type="radio" id="contact-choice-1" name="contact-reason:" value="question" required> <!--Selecting one of the buttons is required. They are grouped by the same name, so only need this one required tag-->
                         <label for="contact-choice-1"> General Question</label>
-                        <input type="radio" id="contact-choice-2" name="contact" value="job-opportunity">
+                        <input type="radio" id="contact-choice-2" name="contact-reason:" value="job-opportunity">
                         <label for="contact-choice-2">Job Opportunity</label>
-                        <input type="radio" id="contact-choice-3" name="contact-choice" value="collaborate">
+                        <input type="radio" id="contact-choice-3" name="contact-reason:" value="collaborate">
                         <label for="contact-choice-3"> Collaboration Opportunity</label>
                     </div>
                     <h3>Type your details below:</h3>
