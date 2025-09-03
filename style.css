@@ -6,7 +6,7 @@
     }
 @media (max-width: 640px) { /* responsiveness for viewing on mobile*/
     nav .menu-background { flex-wrap: wrap; }
-    nav ul { width: 100%; justify-content: center; }
+    .nav-list { width: 100%; justify-content: center; }
     /*small test case of responsive design on mobile*/
     .index-main-content {
         grid-template-columns: 1fr;
