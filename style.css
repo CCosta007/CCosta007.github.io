@@ -94,11 +94,9 @@ footer .footer-container {
     .menu-background { flex-wrap: wrap; }
     .nav-list { width: 100%; justify-content: center; }
     /*small test case of responsive design on mobile*/
-    .index-main-content {
+    .index-main-content > *{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-    }
-    .index-section-3 {
         grid-column: span 1;
         height: auto;
     }
