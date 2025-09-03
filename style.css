@@ -4,19 +4,7 @@
     font-family: 'Montserrat';
     src: url(https://fonts.google.com/specimen/Montserrat);
     }
-@media (max-width: 640px) { /* responsiveness for viewing on mobile*/
-    nav .menu-background { flex-wrap: wrap; }
-    .nav-list { width: 100%; justify-content: center; }
-    /*small test case of responsive design on mobile*/
-    .index-main-content {
-        grid-template-columns: 1fr;
-        grid-template-columns: auto;
-    }
-    .index-section-3 {
-        grid-column: span 1;
-        height: auto;
-    }
-}
+
 
 :root{
     --box-colour: #F0F0F0; /*colour of the containers for info to go in*/
@@ -101,6 +89,19 @@ footer .footer-container {
     justify-content: space-between; /* Space between items */
     gap: var(--spacing); /* Gap between items */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+@media (max-width: 640px) { /* responsiveness for viewing on mobile*/
+    nav .menu-background { flex-wrap: wrap; }
+    .nav-list { width: 100%; justify-content: center; }
+    /*small test case of responsive design on mobile*/
+    .index-main-content {
+        grid-template-columns: 1fr;
+        grid-template-columns: auto;
+    }
+    .index-section-3 {
+        grid-column: span 1;
+        height: auto;
+    }
 }
 
 /*-------------------------------CSS for index page-----------------------------------------------------*/
