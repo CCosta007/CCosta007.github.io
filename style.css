@@ -4,6 +4,19 @@
     font-family: 'Montserrat';
     src: url(https://fonts.google.com/specimen/Montserrat);
     }
+@media (max-width: 640px) { /* responsiveness for viewing on mobile*/
+    nav .menu-background { flex-wrap: wrap; }
+    nav ul { width: 100%; justify-content: center; }
+    /*small test case of responsive design on mobile*/
+    .index-main-content {
+        grid-template-columns: 1fr;
+        grid-template-columns: auto;
+    }
+    .index-section-3 {
+        grid-column: span 1;
+        height: auto;
+    }
+}
 
 :root{
     --box-colour: #F0F0F0; /*colour of the containers for info to go in*/
@@ -68,10 +81,7 @@ body h1,h2,h3,h4,h5,h6 {
 .active{
     font-weight: bold; 
 }
-@media (max-width: 640px) { /* responsiveness for viewing on mobile*/
-    nav .menu-background { flex-wrap: wrap; }
-    nav ul { width: 100%; justify-content: center; }
-}
+
 
 /*footer section taken from starter.css*/
 footer {
