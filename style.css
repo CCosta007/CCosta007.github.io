@@ -89,11 +89,20 @@ footer .footer-container {
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 @media (max-width: 640px) { /* for mobile viewing*/
-    .menu-background { flex-wrap: wrap; }
-    .nav-list { width: 100%; justify-content: center; }
+    .menu-background {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .nav-list { 
+        width: 100%; 
+    }
     /*small test case of responsive design on mobile*/
-    .index-main-content > *{
-        display: block;
+    .index-main-content{
+        grid-template-columns: 1fr; /*grid is 1 column wide*/
+        grid-template-rows: auto; /*automatically adjusts rows to the content in the grid*/
+        grid-column: span 1; /*content goes across the whole column*/
+        height: auto; /*height is adjusted automatically to the content*/
     }
     body > main,header{
         margin-left: 1rem; /*margin on left of page is 1rem (mobile)*/
