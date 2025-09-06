@@ -19,8 +19,8 @@
     --hover-scale-factor: scale(1.02); /* makes the size of the element 2% bigger when the cursor is hovering over it*/
 }
 body > main,header{
-    font-family: var(--main-font);
-    margin: 0px;
+    font-family: var(--main-font); /*ensures all text is the main font*/
+    margin: 0px; /*removes margins in the header and body*/
     color: var(--main-font-colour);
     margin-left: 10rem; /*ensures there is a margin on left side of every page*/
     margin-right: 10rem; /*ensures there is a margin on right side of every page*/
@@ -49,14 +49,14 @@ body h1,h2,h3,h4,h5,h6 {
     justify-content:center;
     list-style-type: none; /*so list doesn't have bullets*/
     gap: 3.125rem; /*used online converter from 50 px to have gap be relative*/
-    flex-grow: 1;
-    font-size: small;
+    flex-grow: 1; /*space between heading links is evenly distributed*/
+    font-size: small; /*makes the font smaller*/
     white-space: nowrap; /* so text doesn't go to new line when browser size changes*/
-    overflow: hidden;
-    top:0;
+    overflow: hidden; /*cuts off any parts that overflow in navigation list*/
+    top:0; /* nav-list is at the top of the cointainer*/
     width:100vw; /*so it is the full viewport width*/
-    padding-left: 0;
-    font-family: var(--main-font);
+    padding-left: 0; /*no padding on the left side of the nav-list*/
+    font-family: var(--main-font); /*uses the main font for the nav-list*/
 }
 /* nav menu text is now black, and has an underline when hovered over by mouse (using hover pseudoclass)*/
 .nav-list a{
@@ -66,11 +66,9 @@ body h1,h2,h3,h4,h5,h6 {
 .nav-list a:hover{
     text-decoration:underline; /* when hovering over the links on the nav, an underline will appear*/
 }
-.active{
+.active{ /*the page currently on will be bold in the nav bar */
     font-weight: bold; 
 }
-
-
 /*footer section taken from starter.css*/
 footer {
     margin-top: 40px; /* Space above footer */
@@ -78,9 +76,9 @@ footer {
     background: var(--box-colour); 
 }
 footer p {
-    color: var(--main-font-colour); 
-    font-family: var(--main-font);
-    text-align: center;
+    color: var(--main-font-colour); /*main body font colour*/
+    font-family: var(--main-font); /*uses main font from root*/
+    text-align: center; /*puts footer text in center*/
 }
 footer .footer-container {
     width: min(100% - 2*var(--spacing), var(--maxw)); /* Responsive width */
@@ -90,19 +88,16 @@ footer .footer-container {
     gap: var(--spacing); /* Gap between items */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
-@media (max-width: 640px) { /* responsiveness for viewing on mobile*/
+@media (max-width: 640px) { /* for mobile viewing*/
     .menu-background { flex-wrap: wrap; }
     .nav-list { width: 100%; justify-content: center; }
     /*small test case of responsive design on mobile*/
     .index-main-content > *{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-column: span 1;
-        height: auto;
+        display: block;
     }
     body > main,header{
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 1rem; /*margin on left of page is 1rem (mobile)*/
+        margin-right: 1rem; /*margin on right of page is 1rem (mobile)*/
     }
 }
 
@@ -111,26 +106,25 @@ footer .footer-container {
     border-bottom-left-radius: 1rem; /* bottom left corner is rounded*/
     border-bottom-right-radius: 1rem; /* bottom left corner is rounded*/
     background-color: var(--box-colour); /* container for header section is slightly off white */
-    box-shadow: var(--shadow-1);
-    margin-bottom: var(--gap-between);
+    box-shadow: var(--shadow-1); /*will have a shadow around the header box*/
+    margin-bottom: var(--gap-between); /*ensures there is a gap between the header and the container below*/
+    margin-top: 2.5rem; /*creates a margin at the top so the heading doesn't overlap with the nav bar*/
 }
 .index-header h1{
-    padding-top: 1.25rem;
-    text-align: center;
-    margin-bottom: 0;
+    text-align: center; /*aligns heading in the centre of about page*/
 }
 
 .index-header img{
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 0.5rem;
-    padding-top: 0;
-    width:15rem;
+    display:block; /*image set as a block to force new line before and after image*/
+    margin-left: auto; /*left-side margin is automatically calculated*/
+    margin-right: auto; /*right-side margin is automatically calculated*/
+    padding-bottom: 0.5rem; /*bottom of the img has padding*/
+    padding-top: 0; /*no padding on the top of the image*/
+    width:15rem; /*width of image is hard-coded to 15rem*/
 }
 
 .index-main-content h2{
-    text-align: center;
+    text-align: center; /*any h2 element is centered*/
 
 }
 
@@ -145,34 +139,34 @@ footer .footer-container {
     margin-bottom: 1.25rem; /*creates a margin at the bottom */
 }
 .index-main-content > *{
-    background-color: var(--box-colour);
-    padding: 1.5rem; 
-    margin:0;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-1);
+    background-color: var(--box-colour); /*all content containers are set to box-colour from the root*/
+    padding: 1.5rem; /*padding around the content elements set to 1.5rem*/
+    margin:0; /*margin of content containers are 0*/
+    border-radius: 1rem; /*the containers have rounded corners, with radius of 1rem*/
+    box-shadow: var(--shadow-1); /*creates a shadow behind the content containers*/
 }
 
 .index-main-content ul, ol {
     list-style-type:disc; /*so list doesn't have bullets*/
-    font-size: var(--regular-text-size);
+    font-size: var(--regular-text-size); /*lists are set to the regular text size from the root*/
 }
 
 .index-main-content li{
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /*list elements have a bottom margin of 2rem*/
 }
 
 .index-main-content .index-section-3{
-    grid-column: span 2;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    height:25rem;
+    grid-column: span 2; /*content spans across 2 columns in the grid*/
+    background: none; /*no background box in the section*/
+    padding: 0; /*content takes up the whole container*/
+    height:25rem; /*height of the container is set to a max of 25rem*/
 }
-.index-main-content .index-section-3 img{
-    width: 100%;
-    height: 100%;
-    border-radius: 1.25rem;
-    box-shadow: var(--shadow-1);
+/*this image was generated from canva magic media*/
+.index-main-content .index-section-3 img{ 
+    width: 100%; /*image takes up width of the whole container*/
+    height: 100%; /*image takes up height of the whole container*/
+    border-radius: 1.25rem; /*rounded corners of 1.25rem*/
+    box-shadow: var(--shadow-1); /*creates shadow behind the image*/
     object-fit: cover; /*so it doesn't strecth and distort*/
     object-position: bottom center; /*part of the image we see*/
 }
@@ -302,11 +296,7 @@ footer .footer-container {
     grid-column: span 2;
     padding: 1.5rem;
 }
-.about-main-content .about-section-3 h2{
-    padding-bottom: 0;
-    padding-top: 0;
-    margin-top:0;
-}
+
 .about-main-content .about-section-3 p{
     font-size: var(--regular-text-size);
 }
@@ -314,8 +304,11 @@ footer .footer-container {
     border-radius: 1.5rem;
     box-shadow: var(--shadow-1);
     width:100%; /*always scales ot take up width of the about-video container */
-    aspect-ratio: 16/9 /*ensures aspect ratio remains same*/
+    aspect-ratio: 16/9; /*ensures aspect ratio remains same*/
 }   
+.about-section-3 iframe:hover{
+    transform: var(--hover-scale-factor);
+}
 
 /*-----------------------------------CSS for teaching page-------------------------------------------------*/
 .teaching-header{
@@ -638,6 +631,9 @@ fieldset{
 }
 .card-content{
     text-align: center;
+}
+.card-content p{
+    font-size: var(--regular-text-size);
 }
 .card img:hover{
     transform: var(--hover-scale-factor); 
