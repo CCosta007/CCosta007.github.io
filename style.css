@@ -81,21 +81,19 @@ footer p {
     text-align: center; /*puts footer text in center*/
 }
 footer .footer-container {
-    width: min(100% - 2*var(--spacing), var(--maxw)); /* Responsive width */
     margin: 0 auto; /*top and bottom margins are 0, left and right margins are divided equally to both sides*/
     display: flex; /* Flex layout */
     justify-content: space-between; /* Space between items */
-    gap: var(--spacing); /* Gap between items */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 @media (max-width: 640px) { /* for mobile viewing*/
     .menu-background {
-        display: flex;
-        flex-wrap: wrap; 
-        justify-content: center;
+        display: flex; /*display layout is a flexbox*/
+        flex-wrap: wrap;  /*content is set to wrap around if required */
+        justify-content: center; /*content is centered in its container*/
     }
     .nav-list { 
-        width: 100%; 
+        width: 100%; /*nav-list takes up full space*/
     }
     /*small test case of responsive design on mobile*/
     .index-main-content{
@@ -119,7 +117,6 @@ footer .footer-container {
 .index-header h1{
     text-align: center; /*aligns heading in the centre of about page*/
 }
-
 .index-header img{
     display:block; /*image set as a block to force new line before and after image*/
     margin-left: auto; /*left-side margin is automatically calculated*/
@@ -128,12 +125,10 @@ footer .footer-container {
     padding-top: 0; /*no padding on the top of the image*/
     width:15rem; /*width of image is hard-coded to 15rem*/
 }
-
 .index-main-content h2{
     text-align: center; /*any h2 element is centered*/
 
 }
-
 .index-main-content {
     display: grid; /*create a grid */
     grid-template-columns: 0.5fr 0.5fr; /*grid is 2 columns, both 0.5 fractional units wide*/
@@ -156,7 +151,6 @@ footer .footer-container {
     list-style-type:disc; /*so list doesn't have bullets*/
     font-size: var(--regular-text-size); /*lists are set to the regular text size from the root*/
 }
-
 .index-main-content li{
     margin-bottom: 2rem; /*list elements have a bottom margin of 2rem*/
 }
@@ -176,98 +170,97 @@ footer .footer-container {
     object-fit: cover; /*so it doesn't strecth and distort*/
     object-position: bottom center; /*part of the image we see*/
 }
-
 /*-----------------------------------CSS for about page-------------------------------------------------*/
 /*format the header container*/
 .about-header{
-    background-color: var(--box-colour);
-    margin-top: 2.5rem;
-    padding: 0;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    box-shadow: var(--shadow-1);
+    background-color: var(--box-colour); /*all content containers are set to box-colour from the root*/
+    margin-top: 2.5rem; /*top margin of about container is 2.5*/
+    padding: 0; /*padding around the content elements set to 0*/
+    border-bottom-left-radius: 1rem; /*rounded corners of 1rem*/
+    border-bottom-right-radius: 1rem; /*rounded corners of 1rem*/
+    box-shadow: var(--shadow-1); /*creates a shadow behind the content containers*/
 }
 /*format the heading*/
 .about-header h1{
-    text-align: center;
-    margin-bottom: 0;
+    text-align: center; /*heading is middle of header container*/
+    margin-bottom: 0; /*no margin after the heading*/
 }
 
 /*the placement overview title*/
 .about-main-content h2{
-    text-align: center;
-    padding: 1.25rem;
-    grid-column: span 4;
+    text-align: center; /*text placed in center of container*/
+    padding: 1.25rem; /*padding all around the heading set to 1.25rem*/
+    grid-column: span 4; /*placement overview heading container spans across the entire grid*/
 }
 
 /*position the banner box*/
 .about-header .banner-graphic-box{
-    display: flex;
-    padding:0;
-    margin-bottom: 1rem;
-    justify-content: center;
-    align-items: center;
-    min-height: 48rem;
-    border-radius: 5rem;
-    margin-bottom: var(--gap-between);
+    display: flex; /*banner is a flexbox*/
+    padding:0;  /*padding around the content elements set to 0*/
+    margin-bottom: 1rem; /*bottom margin set to 1rem*/
+    justify-content: center; /*content placed in center of container horizontally*/
+    align-items: center; /*content placed in center of container vertically*/
+    min-height: 48rem; /*minimum height of the banner box is 48rem to account for the image*/
+    border-radius: 5rem; /*rounded corners of 5rem*/
+    margin-bottom: var(--gap-between); /*margin below banner box is set to gap-between to give nice spacing between it and the content below*/
 }
 /*format the banner image*/
 .about-header .banner-graphic-box img{
-    border-radius: 5rem;
-    height:auto;
-    width:auto;
-    max-width: 80%;
-    max-height: 80%;
-    box-shadow: var(--shadow-1);
+    border-radius: 5rem; /*rounded corners of 5rem for the image to match the container */
+    height:auto; /*height is automatically set*/
+    width:auto; /*width is automatically set*/
+    max-width: 80%; /*width can be a max of 80% of original image size*/
+    max-height: 80%; /*height can be a max of 80% of original image size*/
+    box-shadow: var(--shadow-1); /*shadow of the image has a shadow*/
 }
 
 .about-main-content .main-text{
-    display: grid;
+    display: grid; /*make the main content as a grid*/
     grid-template-columns: repeat(4,1fr); /*4 coloumns*/
     grid-template-rows: 0.5fr 1fr; /* 2 row*/
-    text-align: left;
-    font-size: var(--regular-text-size);
-    gap: 1.25rem;
+    text-align: left; /*text in main content starts on left side of container*/
+    font-size: var(--regular-text-size); /*font size set to regular font size from root*/
+    gap: 1.25rem; /*gap between grid elements is 1.25rem*/
 }
 
 /*applies the boxes to all tags in the main-text class*/
 .about-main-content .main-text > *{
-    background-color: var(--box-colour);
-    padding: 1.5rem;
-    margin:0;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-1);
-    margin-bottom: var(--gap-between);
+    background-color: var(--box-colour); /*all content containers are set to box-colour from the root*/
+    padding: 1.5rem; /*padding around the content elements set to 1.5rem*/
+    margin:0; /*margin set to 0*/
+    border-radius: 1rem; /*rounded corners of 1rem*/
+    box-shadow: var(--shadow-1); /*shadow of the image has a shadow*/
+    margin-bottom: var(--gap-between); /*margin below all main text is set to gap-between to give nice spacing between it and the content below*/
     text-align: center;
 }
 .about-main-content .main-text a{
-    display:inline-block;
-    color: var(--main-font-colour);
-    text-decoration:underline;
+    display:inline-block; /*links are set as inline-blocks in order to not have line breaks before/after the link*/
+    color: var(--main-font-colour); /*colour of the link is same as the rest of the text*/
+    text-decoration:underline; /*links are underlined*/
 }
 .about-main-content .main-text a:hover{
-    font-weight: bold;
-    transform: var(--hover-scale-factor);
+    font-weight: bold; /*when mouse is hovering over a link, it changes the font to bold to provide the user with feedback that its clickable*/
+    transform: var(--hover-scale-factor); /*when mouse is hovering over a link, it changes the size to be bigger to provide the user with feedback that its clickable*/
 }
 
 .about-main-content .main-text .main-text-1 {
-    grid-column: span 2;
-    margin-bottom: 0;
+    grid-column: span 2; /*main-text-1 goes across 2 columns*/
+    margin-bottom: 0; /*no margin under the first part of the text*/
 }
 
 .about-main-content .main-text .main-text-2 {
-    grid-column: span 2;
-    margin-bottom: 0;
+    grid-column: span 2; /*main-text-2 goes across 2 columns*/
+    margin-bottom: 0; /*no margin under the 2nd part of the text*/
 }
 .about-main-content .main-text .main-text-3 {
-    grid-column: span 4;
+    grid-column: span 4; /*3rd part of the main text goes across the whole grid*/
 }
 
 .about-main-content .placement-overview-section{
-    display: grid;
+    display: grid; /*placement sections is another seperate grid*/
     grid-template-columns: repeat(4,1fr); /*4 coloumns*/
     grid-template-rows: 1fr; /* 1 row*/
-    margin:0;
+    margin:0; /*margin set to 0*/
     border-radius: 1rem;
     gap: 1rem;
     margin-top: 1.25rem;
