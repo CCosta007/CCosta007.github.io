@@ -377,6 +377,7 @@ footer .footer-container {
     text-align: center; /*text is aligned in the centre of the behavioural managment container*/
     border-radius: 1.5rem; /*corners in the behavioural management container are rounded to 1.5rem*/
     box-shadow: var(--shadow-1); /*behavioural management container has a shadow*/
+    padding: 1rem; /*provides some room between text in behavioural management section and edges of container*/
 }
 /*----------------------------------CSS for resume page--------------------------------------------------*/
 .resume-header{
