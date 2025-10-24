@@ -1,6 +1,0 @@
-TODO:
-  About me page:
-    - Finish placement containers
-    - write text up for placement overview
-    - change placement overview heading text colour
-    - get real photo for right temp photo
