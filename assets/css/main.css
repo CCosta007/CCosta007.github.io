@@ -3691,18 +3691,18 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		flex-direction: column;
 		-moz-flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		padding: 5em 5em 3em 5em ;
-		width: calc(100% + 2em);
-		margin: 0 0 3em -2em;
+		text-align: center;
+		align-items: center;
 	}
 
 		#footer > * {
 			width: calc(50% - 2em);
-			margin-left: 2em;
+			margin: 1em;
 		}
 
 		#footer .copyright {
@@ -3732,11 +3732,10 @@ input, select, textarea {
 				#footer > * {
 					width: 100%;
 					margin-left: 0;
-					margin-bottom: 3em;
 				}
 
 				#footer .copyright {
-					text-align: left;
+					text-align: center;
 				}
 
 		}
