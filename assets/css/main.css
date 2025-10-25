@@ -9,6 +9,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root{
+    --shadow-1: 0.3rem 0.3rem 0.625rem rgba(0,0,0,0.2); /*trial and error to find these rem values*/;
+    --hover-scale-factor: scale(1.02); /* makes the size of the element 2% bigger when the cursor is hovering over it*/
+}
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -169,6 +173,8 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
+			font-size: large; /*makes links bigger to click on them and provide user feedback so they know its clickable*/
+			font-weight: bold; /*provide user feedback so they know its clickable*/
 		}
 
 	strong, b {
@@ -2369,6 +2375,16 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+
+	}
+	.image a img:hover{ /*added so images with links will transform when hovered over. Indicating they're clickable*/
+		transform: var(--hover-scale-factor);
+	}
+	.spotlight .content .image{
+		box-shadow: var(--shadow-1); /*shadow for my home page profile photo. added to give a sense of depth*/
+	}
+	#first .image a img{
+		box-shadow: var(--shadow-1); /*shadow added to my resume to give a sense of depth*/
 	}
 
 		.image img {
@@ -3741,6 +3757,27 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
+			#nav{ /*added to ensure nav bar still exists on smaller screens*/
+				position:fixed;
+				display:flex;
+				overflow: scroll;
+				flex-direction: row;
+				align-items: center;
+				padding: 1em 0;
+			}
+			#wrapper #main{
+				padding-top: 4em;
+			}
+			#nav ul{
+				display: flex;
+				flex-direction: row;
+				gap:0.5em;
+				padding:0;
+				margin:0;
+			}
+			#nav ul li{
+				display:block;
+			}
 
 			#footer {
 				padding: 3em 2em 1em 2em ;
@@ -3788,13 +3825,19 @@ input, select, textarea {
 
 		}
 
-iframe{
+/*My own added CSS when unsure where to fit it in to the template above.*/
+
+iframe{  /*makes youtube video frame more visually appealing*/
 	border-radius: 1.5rem;
 	width: 60%;
 	aspect-ratio: 16/9;
 }
 
-#intro{
+#intro{ /*makes the gap between nav bar and photo on my home page smaller*/
 	margin-top: 1em !important; 
 	padding-top: 1em !important;
+}
+
+#first.main.special{
+	padding-top: 1.5em; /*removes padding at the top of about, resume pages so the heading isn't too far down, */
 }
