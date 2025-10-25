@@ -3763,6 +3763,7 @@ input, select, textarea {
 				position:fixed;
 				display:flex;
 				overflow: scroll;
+				scrollbar-color: rgba(247, 247, 247, 0.95) rgba(247, 247, 247, 0.95); /*so the scrollbar isn't visible and same colour as nav background*/
 				flex-direction: row;
 				align-items: center;
 				padding: 1em 0;
