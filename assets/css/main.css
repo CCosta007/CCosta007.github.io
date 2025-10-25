@@ -2475,12 +2475,14 @@ input, select, textarea {
 
 		dl dt {
 			display: block;
-			font-weight: 400;
+			font-weight: bold; /*changed this to make the items in the list more clear*/
 			margin: 0 0 1em 0;
+			
 		}
 
 		dl dd {
 			margin-left: 2em;
+			padding-bottom: 1em; /*added padding to the description of each item so there's more room to breathe*/
 		}
 
 		dl.alt dt {
