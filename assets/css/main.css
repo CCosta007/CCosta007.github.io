@@ -3844,3 +3844,10 @@ iframe{  /*makes youtube video frame more visually appealing*/
 #first.main.special{
 	padding-top: 1.5em; /*removes padding at the top of about, resume pages so the heading isn't too far down, */
 }
+
+#first.main.special .image img{ /*my fix so the resume scales with the container.*/
+	max-width: 100%;
+	height:auto;
+	margin-left: auto;
+	margin-right:auto;
+}
