@@ -3601,7 +3601,7 @@ input, select, textarea {
 
 		#main > .main {
 			padding: 5em 5em 3em 5em ;
-			border-top: solid 1px #dddddd;
+			
 		}
 
 			#main > .main:first-child {
@@ -3761,6 +3761,7 @@ input, select, textarea {
 				display:flex;
 				overflow: scroll;
 				scrollbar-color: rgba(247, 247, 247, 0.95) rgba(247, 247, 247, 0.95); /*so the scrollbar isn't visible and same colour as nav background*/
+				scrollbar-width: none;
 				flex-direction: row;
 				align-items: center;
 				padding: 1em 0;
@@ -3781,6 +3782,10 @@ input, select, textarea {
 
 			#footer {
 				padding: 3em 2em 1em 2em ;
+			}
+			body.dark #nav{
+				scrollbar-color: #121212 #1f1f1f;
+				scrollbar-width: none;
 			}
 
 		}
@@ -3848,6 +3853,12 @@ iframe{  /*makes youtube video frame more visually appealing*/
 	margin-left: auto;
 	margin-right:auto;
 }
+#main input[type="text"], #main input[type="email"], #main textarea, #main select[name="demo-category"]{
+	background-color: #ffffff; /*form background fields are white*/
+}
+#main input[type="checkbox"] + label:before{ /*the label:before is targeted becuase that is shown*/
+	background-color: #ffffff; /*form checkbox field is white*/
+}
 #main input[type="text"]:hover, #main input[type="email"]:hover, #main textarea:hover, #main select[name="demo-category"]:hover{
 	background-color: #f0f8ff; /*so the contact form different sections change colour when hovering over them with cursor */
 }
@@ -3855,3 +3866,46 @@ iframe{  /*makes youtube video frame more visually appealing*/
 #main input[type="checkbox"]:hover + label:before{ /*the label:before is targeted becuase that is shown*/
 	background-color: #f0f8ff;
 }
+
+#resource-imgs.image{
+	max-width:80%; /*make the photo of the resource fit nicely on the resource page*/
+}
+
+#full-form{
+	padding: 1em 1em 1em 1em;
+	background-color: #f7f7f7;
+	border-radius: 8px;
+}
+
+/*DARK MODE COLOURING*/
+.dark-mode-container{
+	display:flex;
+	justify-content: right;
+	
+}
+#darkModeBtn{
+	margin-right: 1em;
+}
+body.dark { /*for dark mode theme*/
+  background: linear-gradient(45deg,#b84f5c 15%, #3c2e68);
+}
+body.dark #wrapper #nav.alt{
+	background-color: #1f1f1f;
+	color: #e0e0e0;
+}
+body.dark #wrapper #main{
+	background-color: #121212;
+	color: #e0e0e0;
+}
+
+body.dark #darkModeBtn{
+	color: #ffffff !important;
+}
+
+body.dark #intro h2{
+	color: #e0e0e0;
+}
+body.dark #intro h3{
+	color: #e0e0e0;
+}
+

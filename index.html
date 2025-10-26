@@ -16,7 +16,6 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
@@ -31,24 +30,27 @@
 
 				<!-- Main -->
 					<div id="main">
-
+						<div class="dark-mode-container"> <!--so I can change its position etc-->
+							<button id="darkModeBtn">Enable Dark Mode</button>
+						</div>
 						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<span class="image"><img src="images/profile-picture-circle.png" alt="Portrait of Chase smiling" /></span>
-										<header class="major">
-											<h2>Chase's teaching portfolio</h2>
-										</header>
-										<p>I am a Digital Technologies and Mathematics pre-service teacher who organizes and delivers a numeracy support
-										program for Year 7-9 students at Buckley Park College. I have also completed several professional development
-										courses, including Glenn Pearsall's seminars on differentiation and teaching mathematics to students with vision
-										impairments at the SVRC.</p>
-										<h3>A video I love about maths:</h3>
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/s_L-fp8gDzY?si=mRFbBWH07_96f_bu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-									</div>						
-								</div>
-							</section>
+						<section id="intro" class="main">
+							<div class="spotlight">
+								<div class="content">
+									<span class="image"><img src="images/profile-picture-circle.png" alt="Portrait of Chase smiling" /></span>
+									<header class="major">
+										<h2>Chase's teaching portfolio</h2>
+									</header>
+									<p>I am a Digital Technologies and Mathematics pre-service teacher who organizes and delivers a numeracy support
+									program for Year 7-9 students at Buckley Park College. I have also completed several professional development
+									courses, including Glenn Pearsall's seminars on differentiation and teaching mathematics to students with vision
+									impairments at the SVRC.</p>
+									<h3>A video I love about maths:</h3>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/s_L-fp8gDzY?si=mRFbBWH07_96f_bu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>						
+							</div>
+						</section>
+					</div>
 			</div>
 		<!-- Footer -->
 			<footer id="footer">
@@ -64,6 +66,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script type="module" src="assets/js/dark-mode-logic.js"></script>
 	</body>
 </html>
