@@ -3877,11 +3877,10 @@ iframe{  /*makes youtube video frame more visually appealing*/
 	border-radius: 8px;
 }
 
-/*DARK MODE COLOURING*/
+/*------------DARK MODE COLOURING-------------------------------------*/
 .dark-mode-container{
 	display:flex;
 	justify-content: right;
-	
 }
 #darkModeBtn{
 	margin-right: 1em;
@@ -3890,8 +3889,11 @@ body.dark { /*for dark mode theme*/
   background: linear-gradient(45deg,#b84f5c 15%, #3c2e68);
 }
 body.dark #wrapper #nav.alt{
-	background-color: #1f1f1f;
+	background-color: #1f1f1f; /*change nav link colour to darker grey*/
 	color: #e0e0e0;
+}
+body.dark #nav.alt a.active{
+	color:#121212 /*changes colour of the nav link thats active*/
 }
 body.dark #wrapper #main{
 	background-color: #121212;
@@ -3909,3 +3911,46 @@ body.dark #intro h3{
 	color: #e0e0e0;
 }
 
+body.dark #first h2 {
+	color: #e0e0e0;
+}
+
+body.dark #first h3{
+	color: #e0e0e0;
+}
+body.dark a:hover{
+	color:#ffffff !important;
+}
+body.dark dt{
+	color:#ffffff !important;
+}
+/*contact form dark mode*/
+body.dark #main a.button{
+	color: #e0e0e0 !important;
+}
+body.dark #content #full-form h2{
+	color:#e0e0e0;
+}
+body.dark #main label[for="demo-copy"] {
+	color:#ffffff;
+}
+body.dark #full-form{
+	background-color: #1f1f1f;
+}
+body.dark #main input[type="text"], body.dark #main input[type="email"], body.dark #main textarea, body.dark #main select[name="demo-category"]{
+	background-color: #E7E7E7; /*form background fields are white*/
+}
+body.dark #main input[type="checkbox"] + body.dark label:before{ /*the label:before is targeted becuase that is shown*/
+	background-color: #E7E7E7; /*form checkbox field is white*/
+}
+body.dark #main input[type="text"]:hover, body.dark #main input[type="email"]:hover, body.dark #main textarea:hover, body.dark #main select[name="demo-category"]:hover{
+	background-color: #f0f8ff; /*so the contact form different sections change colour when hovering over them with cursor */
+}
+
+body.dark #main input[type="checkbox"]:hover + body.dark label:before{ /*the label:before is targeted becuase that is shown*/
+	background-color: #f0f8ff;
+}
+
+body.dark #main input[type="reset"]{
+	color:#ffffff !important;
+}
