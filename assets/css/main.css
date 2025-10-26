@@ -2199,23 +2199,23 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #1f1f1f !important;
 	}
 
 	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #1f1f1f !important;
 	}
 
 	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #1f1f1f !important;
 	}
 
 	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #1f1f1f !important;
 	}
 
 	.formerize-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: #1f1f1f !important;
 	}
 
 /* Icon */
@@ -3515,23 +3515,23 @@ input, select, textarea {
 		}
 
 		#main ::-webkit-input-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: #1f1f1f !important;
 		}
 
 		#main :-moz-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: #1f1f1f !important;
 		}
 
 		#main ::-moz-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: #1f1f1f !important;
 		}
 
 		#main :-ms-input-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: #1f1f1f !important;
 		}
 
 		#main .formerize-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: #1f1f1f !important;
 		}
 
 		#main .icon.major {
@@ -3947,10 +3947,22 @@ body.dark #main input[type="text"]:hover, body.dark #main input[type="email"]:ho
 	background-color: #f0f8ff; /*so the contact form different sections change colour when hovering over them with cursor */
 }
 
-body.dark #main input[type="checkbox"]:hover + body.dark label:before{ /*the label:before is targeted becuase that is shown*/
-	background-color: #f0f8ff;
-}
-
 body.dark #main input[type="reset"]{
 	color:#ffffff !important;
 }
+
+#genInfoBtn, #placOvBtn, #futGoalsBtn{
+	background:url(/images/show-arrow.png) no-repeat;
+	background-size: contain;
+	min-width: 0;
+	box-shadow: none !important;
+}
+
+body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn{
+	background:url(/images/show-arrow-dark.png) no-repeat;
+	background-size: contain;
+	min-width: 0;
+	box-shadow: none !important;
+}
+
+
