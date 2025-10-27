@@ -3956,19 +3956,20 @@ body.dark #main input[type="reset"]{
 body.dark #aboutReturnBtn.button.primary{ /*for return button on 2nd about page. button text black so it contrasts with the blue background */
 	color: #121212 !important; 
 }
-#genInfoBtn, #placOvBtn, #futGoalsBtn{ /*displays the arrow for the show more button*/
+#genInfoBtn, #placOvBtn, #futGoalsBtn, #profOvBtn, #PlacInBtn{ /*displays the arrow for the show more button*/
 	background:url(/images/show-arrow.png) no-repeat;
 	background-size: contain;
 	min-width: 0;
 	box-shadow: none !important;	
 }
 
-body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn{ /*displays the arrow for the show more button in dark mode*/
+body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn, body.dark #PlacInBtn, body.dark #profOvBtn{ /*displays the arrow for the show more button in dark mode*/
 	background:url(/images/show-arrow-dark.png) no-repeat;
 	background-size: contain;
 	min-width: 0;
 	box-shadow: none !important;
 }
+
 
 
 
