@@ -3956,18 +3956,33 @@ body.dark #main input[type="reset"]{
 body.dark #aboutReturnBtn.button.primary{ /*for return button on 2nd about page. button text black so it contrasts with the blue background */
 	color: #121212 !important; 
 }
-#genInfoBtn, #placOvBtn, #futGoalsBtn, #profOvBtn, #PlacInBtn, #teachPhilBtn, #coreValsBtn, #behavManBtn{ /*displays the arrow for the show more button*/
+/*displays the arrow for the show more button, and make sure there is no shadow on hover*/
+#genInfoBtn, #placOvBtn, #futGoalsBtn, #profOvBtn, #PlacInBtn, #teachPhilBtn, #coreValsBtn, #behavManBtn, #genInfoBtn.button:hover, #placOvBtn.button:hover, #futGoalsBtn.button:hover, #profOvBtn.button:hover, #PlacInBtn.button:hover, #teachPhilBtn.button:hover, #coreValsBtn.button:hover, #behavManBtn.button:hover{ 
 	background:url(/images/show-arrow.png) no-repeat;
 	background-size: contain;
 	min-width: 0;
 	box-shadow: none !important;	
 }
-
-body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn, body.dark #PlacInBtn, body.dark #profOvBtn{ /*displays the arrow for the show more button in dark mode*/
+/*displays the arrow for the show more button in dark mode, and make sure there is no shadow on hover*/
+body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn, body.dark #PlacInBtn, body.dark #profOvBtn, body.dark #teachPhilBtn, body.dark #coreValsBtn, body.dark #behavManBtn, body.dark #genInfoBtn.button:hover, body.dark #placOvBtn.button:hover, body.dark #futGoalsBtn.button:hover, body.dark #PlacInBtn.button:hover, body.dark #profOvBtn.button:hover, body.dark #teachPhilBtn.button:hover, body.dark #coreValsBtn.button:hover, body.dark #behavManBtn.button:hover{ 
 	background:url(/images/show-arrow-dark.png) no-repeat;
 	background-size: contain;
 	min-width: 0;
 	box-shadow: none !important;
+}
+
+#leftBtn, #leftBtn.button:hover{
+	background:url(/images/left-arrow.png) no-repeat;
+	background-size: contain;
+	min-width: 0;
+	box-shadow: none !important;	
+}
+
+#rightBtn, #rightBtn.button:hover{
+	background:url(/images/right-arrow.png) no-repeat;
+	background-size: contain;
+	min-width: 0;
+	box-shadow: none !important;	
 }
 
 
