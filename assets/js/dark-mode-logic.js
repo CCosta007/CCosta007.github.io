@@ -12,7 +12,6 @@ if (localStorage.getItem("theme") === "dark"){ /*This will check if the theme ha
 
 theButton.addEventListener('click', () => {
     body.classList.toggle("dark"); /*uses toggle method to add, or remove the dark class with each click */
-
     const isDark = body.classList.contains("dark"); /*checks whether dark is in the body. True if it is, false if it is not*/
     
     if(isDark){

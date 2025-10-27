@@ -3947,22 +3947,29 @@ body.dark #main input[type="text"]:hover, body.dark #main input[type="email"]:ho
 	background-color: #f0f8ff; /*so the contact form different sections change colour when hovering over them with cursor */
 }
 
+body.dark #theSubmitBtn.primary{ /*make submit button text black so it contrasts with the blue background*/
+	color:#1f1f1f !important;
+}
 body.dark #main input[type="reset"]{
 	color:#ffffff !important;
 }
-
-#genInfoBtn, #placOvBtn, #futGoalsBtn{
+body.dark #aboutReturnBtn.button.primary{ /*for return button on 2nd about page. button text black so it contrasts with the blue background */
+	color: #121212 !important; 
+}
+#genInfoBtn, #placOvBtn, #futGoalsBtn{ /*displays the arrow for the show more button*/
 	background:url(/images/show-arrow.png) no-repeat;
 	background-size: contain;
 	min-width: 0;
-	box-shadow: none !important;
+	box-shadow: none !important;	
 }
 
-body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn{
+body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn{ /*displays the arrow for the show more button in dark mode*/
 	background:url(/images/show-arrow-dark.png) no-repeat;
 	background-size: contain;
 	min-width: 0;
 	box-shadow: none !important;
 }
+
+
 
 

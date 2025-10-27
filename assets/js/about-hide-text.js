@@ -13,14 +13,22 @@ genInfoText.style.display = "none";
 placementText.style.display = "none";
 goalsText.style.display = "none";
 
-//function to hide the text, and also change the button direction
+//function to hide the text
 function hideText(p, b){
-    if(p.style.display === "none"){
+    const isDark = document.body.classList.contains("dark"); /*will be true if it is in dark mode, false if it isn't */
+    
+    if(p.style.display === "none" && isDark){
         p.style.display = "block"
-        b.style.backgroundImage = "url(/images/hide-arrow.png)"
-    }else{
+        b.style.backgroundImage = "url(images/hide-arrow-dark.png)" 
+    }else if(p.style.display === "none" && !isDark){
+        p.style.display = "block"
+        b.style.backgroundImage = "url(images/hide-arrow.png)" 
+    }else if(!(p.style.display === "none") && isDark){
         p.style.display = "none"
-        b.style.backgroundImage = "url(/images/show-arrow.png)"
+        b.style.backgroundImage = "url(images/show-arrow-dark.png)" 
+    }else if(!(p.style.display === "none") && !isDark){
+        p.style.display = "none"
+        b.style.backgroundImage = "url(images/show-arrow.png)"  
     }
 }
 
