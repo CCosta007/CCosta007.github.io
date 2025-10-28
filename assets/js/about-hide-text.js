@@ -69,24 +69,98 @@ function hideText(p, b){
     }
 };
 const btnArray = [
-        {btn:infoBtn, para:genInfoText},
-        {btn:placementBtn, para:placementText},
-        {btn:goalsBtn, para:goalsText},
-        {btn:profBtn, para:profInText},
-        {btn:placBtn, para:placOvText},
-        {btn:philBtn, para:philText},
-        {btn:valsBtn, para:valText},
-        {btn:behavBtn, para:behavText},
-        {btn:bkwdBtn, para:null},
-        {btn:fwdBtn, para:null}  
+        {btn:infoBtn, text:genInfoText},
+        {btn:placementBtn, text:placementText},
+        {btn:goalsBtn, text:goalsText},
+        {btn:profBtn, text:profInText},
+        {btn:placBtn, text:placOvText},
+        {btn:philBtn, text:philText},
+        {btn:valsBtn, text:valText},
+        {btn:behavBtn, text:behavText},
+        {btn:bkwdBtn, text:null},
+        {btn:fwdBtn, text:null}  
 ];
 
-//function to update the buttons to dark or light mode. Exported so the dark mode logic file can utilize.
-//This function is poor and there would be a cleaner way to implement it (like an array of buttons), but this was the best I could come up with and it works
+
+/* 
+function to update the buttons to dark or light mode. Exported so the dark mode logic file can utilize.
+This function is poor and there would be a cleaner way to implement it (like an array of buttons), 
+but this was the best I could come up with and it works
+*/
 export function updateButtonTheme(){
     const isDark = document.body.classList.contains("dark"); /*will be true if it is in dark mode, false if it isn't */
     
-    //insert button function here
+    for(let i=0; i < btnArray.length; i++){
+        const theBtn = btnArray[i].btn;
+        const theText = btnArray[i].text;
+        
+        // if the button doesn't exist, skip the iteration
+        if (!theBtn){ 
+            continue;
+        }
+        //this will deal with the carousel buttons, as the text will be null
+        if(!theText){ 
+            if(theBtn === fwdBtn){
+                fwdBtn.style.backgroundImage = isDark ? "url(images/right-arrow-dark.png)": "url(images/right-arrow.png)";
+            }
+            else if(theBtn === bkwdBtn){
+                bkwdBtn.style.backgroundImage = isDark ? "url(images/left-arrow-dark.png)": "url(images/left-arrow.png)";
+            }
+            continue;
+        }
+
+        //this will deal with the show/hide buttons 
+        if (theText.style.display === "none"){
+            theBtn.style.backgroundImage = isDark ? "url(images/show-arrow-dark.png)": "url(images/show-arrow.png)"; //will set the show dark arrow if dark theme is active, else it will set light arrow
+        }else{
+            theBtn.style.backgroundImage = isDark ? "url(images/hide-arrow-dark.png)": "url(images/hide-arrow.png)"; //will set the hide dark arrow if dark theme is active, else it will set hide light arrow
+        }
+    }
+        
+};
+
+
+//event listeners on the buttons to hide/show text. Put them in if statements in case the buttons don't exist
+if(infoBtn){
+    infoBtn.addEventListener("click", () => hideText(genInfoText, infoBtn));
+    updateButtonTheme();
+}
+if(placementBtn){
+    placementBtn.addEventListener("click", () => hideText(placementText, placementBtn));
+    updateButtonTheme();
+}
+if(goalsBtn){
+    goalsBtn.addEventListener("click", () => hideText(goalsText, goalsBtn));
+    updateButtonTheme();
+}
+if(profBtn){
+    profBtn.addEventListener("click", () => hideText(profInText, profBtn));
+    updateButtonTheme();
+}
+if(placBtn){
+    placBtn.addEventListener("click", () => hideText(placOvText, placBtn));
+    updateButtonTheme();
+}
+if(philBtn){
+    philBtn.addEventListener("click", () => hideText(philText, philBtn));
+    updateButtonTheme();
+}
+if(valsBtn){
+    valsBtn.addEventListener("click", () => hideText(valText, valsBtn));
+    updateButtonTheme();
+}
+if(behavBtn){
+    behavBtn.addEventListener("click", () => hideText(behavText, behavBtn));
+    updateButtonTheme();
+}
+if(fwdBtn){
+    updateButtonTheme();
+}
+if(bkwdBtn){
+    updateButtonTheme();
+}
+
+//---------------------old updateButtonTheme function--------------------------------
 
     /*
     if(profBtn){
@@ -152,44 +226,3 @@ export function updateButtonTheme(){
     if(bkwdBtn){
         bkwdBtn.style.backgroundImage = isDark ? "url(images/left-arrow-dark.png)": "url(images/left-arrow.png)";
     }*/
-};
-
-//event listeners on the buttons to hide/show text. Put them in if statements in case the buttons don't exist
-if(infoBtn){
-    infoBtn.addEventListener("click", () => hideText(genInfoText, infoBtn));
-    updateButtonTheme();
-}
-if(placementBtn){
-    placementBtn.addEventListener("click", () => hideText(placementText, placementBtn));
-    updateButtonTheme();
-}
-if(goalsBtn){
-    goalsBtn.addEventListener("click", () => hideText(goalsText, goalsBtn));
-    updateButtonTheme();
-}
-if(profBtn){
-    profBtn.addEventListener("click", () => hideText(profInText, profBtn));
-    updateButtonTheme();
-}
-if(placBtn){
-    placBtn.addEventListener("click", () => hideText(placOvText, placBtn));
-    updateButtonTheme();
-}
-if(philBtn){
-    philBtn.addEventListener("click", () => hideText(philText, philBtn));
-    updateButtonTheme();
-}
-if(valsBtn){
-    valsBtn.addEventListener("click", () => hideText(valText, valsBtn));
-    updateButtonTheme();
-}
-if(behavBtn){
-    behavBtn.addEventListener("click", () => hideText(behavText, behavBtn));
-    updateButtonTheme();
-}
-if(fwdBtn){
-    updateButtonTheme();
-}
-if(bkwdBtn){
-    updateButtonTheme();
-}

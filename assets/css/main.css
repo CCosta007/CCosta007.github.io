@@ -4001,3 +4001,6 @@ body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn, body.dark #
 	min-width: 100%;
 	box-sizing: border-box;
 }
+body.dark .slide img{
+	filter: brightness(0.8);
+}
