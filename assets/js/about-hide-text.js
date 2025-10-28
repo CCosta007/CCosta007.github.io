@@ -1,26 +1,38 @@
-//paragraphs to hide
+//-------------paragraphs to hide----------------------------
+
+//about page text
 const genInfoText = document.getElementById("genInfo");
 const placementText = document.getElementById("placOv");
 const goalsText = document.getElementById("futGoals");
 
+//about page 2 text
 const profInText = document.getElementById("profInfP");
 const placOvText = document.getElementById("placInP");
 
+//pedagogy page text
 const philText = document.getElementById("teachPhil");
 const valText = document.getElementById("coreVals");
 const behavText = document.getElementById("behavMan");
 
-//buttons
+//----------------buttons------------------------------------
+
+//about page btns
 const infoBtn = document.getElementById("genInfoBtn");
 const placementBtn = document.getElementById("placOvBtn");
 const goalsBtn = document.getElementById("futGoalsBtn");
 
+//about page 2 btns
 const profBtn = document.getElementById("profOvBtn");
 const placBtn = document.getElementById("PlacInBtn");
 
+//pedagogy btns
 const philBtn = document.getElementById("teachPhilBtn");
 const valsBtn = document.getElementById("coreValsBtn");
 const behavBtn = document.getElementById("behavManBtn");
+
+//resource btns
+const bkwdBtn = document.getElementById("leftBtn");
+const fwdBtn = document.getElementById("rightBtn");
 
 //start the paragraphs hidden. Put as an if statement in case the buttons don't exist
 if(genInfoText && placementText && goalsText){
@@ -56,11 +68,27 @@ function hideText(p, b){
         b.style.backgroundImage = "url(images/show-arrow.png)"  
     }
 };
+const btnArray = [
+        {btn:infoBtn, para:genInfoText},
+        {btn:placementBtn, para:placementText},
+        {btn:goalsBtn, para:goalsText},
+        {btn:profBtn, para:profInText},
+        {btn:placBtn, para:placOvText},
+        {btn:philBtn, para:philText},
+        {btn:valsBtn, para:valText},
+        {btn:behavBtn, para:behavText},
+        {btn:bkwdBtn, para:null},
+        {btn:fwdBtn, para:null}  
+];
 
 //function to update the buttons to dark or light mode. Exported so the dark mode logic file can utilize.
-//This function is poor and there would be a cleaner way to implement it (like an array of buttons or something), but this was the best I could come up with and it works
+//This function is poor and there would be a cleaner way to implement it (like an array of buttons), but this was the best I could come up with and it works
 export function updateButtonTheme(){
     const isDark = document.body.classList.contains("dark"); /*will be true if it is in dark mode, false if it isn't */
+    
+    //insert button function here
+
+    /*
     if(profBtn){
         if (profInText.style.display === "none"){
             profBtn.style.backgroundImage = isDark ? "url(images/show-arrow-dark.png)": "url(images/show-arrow.png)"; //will set the show dark arrow if dark theme is active, else it will set light arrow
@@ -118,6 +146,12 @@ export function updateButtonTheme(){
             goalsBtn.style.backgroundImage = isDark ? "url(images/hide-arrow-dark.png)": "url(images/hide-arrow.png)"; 
         }
     }
+    if(fwdBtn){
+        fwdBtn.style.backgroundImage = isDark ? "url(images/right-arrow-dark.png)": "url(images/right-arrow.png)";
+    }
+    if(bkwdBtn){
+        bkwdBtn.style.backgroundImage = isDark ? "url(images/left-arrow-dark.png)": "url(images/left-arrow.png)";
+    }*/
 };
 
 //event listeners on the buttons to hide/show text. Put them in if statements in case the buttons don't exist
@@ -151,5 +185,11 @@ if(valsBtn){
 }
 if(behavBtn){
     behavBtn.addEventListener("click", () => hideText(behavText, behavBtn));
+    updateButtonTheme();
+}
+if(fwdBtn){
+    updateButtonTheme();
+}
+if(bkwdBtn){
     updateButtonTheme();
 }

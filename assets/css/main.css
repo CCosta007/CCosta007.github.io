@@ -3985,11 +3985,19 @@ body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn, body.dark #
 	box-shadow: none !important;	
 }
 /*------------------------------------------Carousel------------------------------------------*/
+#first header.major{
+	margin-bottom: 0;
+}
 #resource-imgs{
 	width: 100%;
 	overflow: hidden;
 }
 .resource-slides{
 	display: flex;
-	overflow: hidden;
+	transition: transform 0.5s ease-in-out; /*so the slide moves starting slowly, then quicker, then slowly when finishing*/
+}
+
+.slide{
+	min-width: 100%;
+	box-sizing: border-box;
 }

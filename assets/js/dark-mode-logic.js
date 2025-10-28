@@ -3,10 +3,6 @@ import {updateButtonTheme} from "./about-hide-text.js";
 const theButton = document.getElementById("darkModeBtn");
 const body = document.body;
 
-const infoBtn = document.getElementById("genInfoBtn");
-const placementBtn = document.getElementById("placOvBtn");
-const goalsBtn = document.getElementById("futGoalsBtn");
-
 if (localStorage.getItem("theme") === "dark"){ /*This will check if the theme has been clicked before from a prev visit */
     body.classList.add("dark"); /*if it is dark, then the CSS class dark will be activated for the styling*/
     theButton.textContent = "Enable Light mode"; /*change the button text to light mode*/
