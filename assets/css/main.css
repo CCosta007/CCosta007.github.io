@@ -3984,8 +3984,12 @@ body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn, body.dark #
 	min-width: 0;
 	box-shadow: none !important;	
 }
-
-
-
-
-
+/*------------------------------------------Carousel------------------------------------------*/
+#resource-imgs{
+	width: 100%;
+	overflow: hidden;
+}
+.resource-slides{
+	display: flex;
+	overflow: hidden;
+}
