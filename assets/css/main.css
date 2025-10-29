@@ -3766,8 +3766,10 @@ input, select, textarea {
 				align-items: center;
 				padding: 1em 0;
 			}
+
 			#wrapper #main{
 				padding-top: 4em;
+				padding-right: 1em;
 			}
 			#nav ul{
 				display: flex;
@@ -4003,4 +4005,12 @@ body.dark #genInfoBtn, body.dark #placOvBtn, body.dark #futGoalsBtn, body.dark #
 }
 body.dark .slide img{
 	filter: brightness(0.8);
+}
+/*----------------------------------Contact page---------------------------------*/
+#successMessage{
+	display: none;
+	position: fixed;
+	z-index: 1000; /*make sure its the top element so it can be seen*/
+	background-color: #f7f7f7;
+	border-radius: 8px; /*same as other elements from template*/
 }
