@@ -1,7 +1,7 @@
 document.getElementById("theSubmitBtn").addEventListener("click", (e) => {
     e.preventDefault(); //so the default form submission doesn't occur
-
     checkForErrors();
+    
 });
 
 //close the success pop up message if the user hits the close button
@@ -32,22 +32,30 @@ function checkForErrors(){
     }
 
     if(!email){
-        errors = [...errors, "please enter an email"]
-    }else if (email){
-        const checkEmail = emailTest(email);
+        errors = [...errors, "please enter an email"];
+    }else if(!emailTest(email)){
+        errors = [...errors, "please enter an email"];
+    }
 
-    if (!checkEmail){
-        errors = [...errors, "please enter a valid email address"];
+    if(errors.length > 0){
+        //do fail state
+
+    }else{ //success     
+        document.querySelector("#full-form form").reset(); // this will reset the form    
+        successPopUp.style.display =  "flex";
     }
-    else{
-        //do fail or success 
-        successPopUp.style.display =  "block";
-        document.querySelector("#full-form form").reset(); // this will reset the form
-    }
-    }
+
 };
 
-function emailTest(){
-    return true;
+function emailTest(emailAdd){
+    const emailRegEx = //DO THIS
+    if (emailRegEx.test(emailAdd)){
+        console.log("works");
+        return true;
+    }
+    else{
+        console.log("doesn't");
+        return false;
+    }
 }
 

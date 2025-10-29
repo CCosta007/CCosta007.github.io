@@ -4009,8 +4009,15 @@ body.dark .slide img{
 /*----------------------------------Contact page---------------------------------*/
 #successMessage{
 	display: none;
-	position: fixed;
+	position: absolute;
+	flex-direction: column; /*so the button is below the message */
+	justify-content: center;
+	align-items: center;
 	z-index: 1000; /*make sure its the top element so it can be seen*/
 	background-color: #f7f7f7;
+	border-color: #dddddd;
+	color: #636363;
 	border-radius: 8px; /*same as other elements from template*/
+	box-shadow: var(--shadow-1); /*add depth as it is above the form*/
+	padding: 1em;
 }
