@@ -3854,6 +3854,10 @@ iframe{  /*makes youtube video frame more visually appealing*/
 	height:auto;
 	margin-left: auto;
 	margin-right:auto;
+	
+}
+body.dark #first.main.special .image img{ 
+	filter: brightness(0.8); /*ensures the resume is not too bright in dark mode*/
 }
 #main input[type="text"], #main input[type="email"], #main textarea, #main select[name="demo-category"]{
 	background-color: #ffffff; /*form background fields are white*/
@@ -4007,12 +4011,19 @@ body.dark .slide img{
 	filter: brightness(0.8);
 }
 /*----------------------------------Contact page---------------------------------*/
-#successMessage{
-	display: none;
+#full-form{
+	position: relative; /*is the anchor for the success and error pop up messages*/
+}
+#successMessage, #errorMessage{
+	display: none; /*will become flex when activated*/
 	position: absolute;
 	flex-direction: column; /*so the button is below the message */
 	justify-content: center;
 	align-items: center;
+	top:50%; /*50% down from top*/
+	left:50%;/*50% across*/
+	transform: translate(-50%, -50%); /*go 50% left and 50% up. Allows it to be centered of the form*/
+	width: 70%;
 	z-index: 1000; /*make sure its the top element so it can be seen*/
 	background-color: #f7f7f7;
 	border-color: #dddddd;
@@ -4020,4 +4031,24 @@ body.dark .slide img{
 	border-radius: 8px; /*same as other elements from template*/
 	box-shadow: var(--shadow-1); /*add depth as it is above the form*/
 	padding: 1em;
+}
+body.dark #successMessage{
+	background-color: #E7E7E7;
+
+}
+
+#errorText{
+	color: #CE0B00;
+}
+body.dark #errorMessage{
+	background-color: #E7E7E7;
+}
+body.dark #closeErrorBtn, body.dark #closeSuccessBtn{
+	background-color: #1f1f1f;	
+}
+body.dark #closeErrorBtn:hover, body.dark #closeSuccessBtn:hover{
+	background-color: #636363;
+}
+body.dark #closeErrorBtn.button, body.dark #closeSuccessBtn.button{
+	color: #ffffff !important;
 }
