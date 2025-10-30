@@ -1,5 +1,5 @@
 document.getElementById("theSubmitBtn").addEventListener("click", (e) => {
-   // e.preventDefault(); //so the default form submission doesn't occur
+    e.preventDefault(); //so the default form submission doesn't occur
     checkForErrors();
     
 });
@@ -22,7 +22,7 @@ function checkForErrors(){
     const theMessage = document.getElementById("demo-message").value.trim();
     const successPopUp = document.getElementById("successMessage");
     const errorPopUp = document.getElementById("errorMessage");
-
+    const theForm = document.querySelector("#full-form form");
     let errors = [];
 
     if(!name){
@@ -38,7 +38,7 @@ function checkForErrors(){
     }
 
     if(!email){
-        errors = [...errors, "An email address is required"];
+        errors = [...errors, "An email address is reqired"];
     }else if(!emailTest(email)){
         errors = [...errors, "A valid email address is required"];
     }
@@ -54,6 +54,7 @@ function checkForErrors(){
         }
         errorPopUp.style.display =  "flex"; //display the error pop up 
     }else{ //success     
+        theForm.submit();
         document.querySelector("#full-form form").reset(); // this will reset the form    
         successPopUp.style.display =  "flex"; //display the success pop up
     }
@@ -75,6 +76,4 @@ function emailTest(emailAdd){
         return false;
     }
 };
-
-
 
