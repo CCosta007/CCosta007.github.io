@@ -1,5 +1,5 @@
 document.getElementById("theSubmitBtn").addEventListener("click", (e) => {
-    e.preventDefault(); //so the default form submission doesn't occur
+   // e.preventDefault(); //so the default form submission doesn't occur
     checkForErrors();
     
 });
@@ -75,5 +75,6 @@ function emailTest(emailAdd){
         return false;
     }
 };
+
 
 
