@@ -1,8 +1,6 @@
-@font-face {
+body{
     font-family: 'Montserrat';
-    src: url(https://fonts.google.com/specimen/Montserrat);
     }
-
 /*
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
@@ -4036,7 +4034,9 @@ body.dark #successMessage{
 	background-color: #E7E7E7;
 
 }
-
+#errorMessage h4{
+	font-weight: bold;
+}
 #errorText{
 	color: #CE0B00;
 }

@@ -47,9 +47,11 @@ function checkForErrors(){
         document.querySelector("#full-form form").reset(); // this will reset the form    
         let errorMessages = document.getElementById("errorText");
         errorMessages.textContent = ""; //clears error messages from perevious attempts
-
-        /*FIX THIS SO IT DISPLAYS EACH ERROR ON A NEW LINE */
-        errorMessages.textContent = errors.push(errorMessages.textContent); //display the errors to the user
+        for(const e of errors){ // loop through the error list
+            const li = document.createElement("li"); //create a list element 
+            li.textContent = e; //let the text content for the list element be the error message 
+            errorMessages.appendChild(li); // put the list element in the error ul so the all display in the pop-up on seperate lines
+        }
         errorPopUp.style.display =  "flex"; //display the error pop up 
     }else{ //success     
         document.querySelector("#full-form form").reset(); // this will reset the form    
