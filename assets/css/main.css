@@ -3753,14 +3753,13 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
+			#phoneMenu{
+				background-color: #636363;
+			}
 			#nav{ /*added to ensure nav bar still exists on smaller screens*/
-				width:100%;
-				position:fixed;
 				display:flex;
-				overflow: scroll;
-				scrollbar-color: rgba(247, 247, 247, 0.95) rgba(247, 247, 247, 0.95); /*so the scrollbar isn't visible and same colour as nav background*/
-				scrollbar-width: none;
-				flex-direction: row;
+				background: none !important;/*so the scrollbar isn't visible and same colour as nav background*/
+				flex-direction: column;
 				align-items: center;
 				padding: 1em 0;
 			}
@@ -3770,11 +3769,14 @@ input, select, textarea {
 				padding-right: 1em;
 			}
 			#nav ul{
-				display: flex;
-				flex-direction: row;
+				display: none;
+				flex-direction: column;
 				gap:0.5em;
 				padding:0;
 				margin:0;
+			}
+			#nav ul.show{
+				display: flex;
 			}
 			#nav ul li{
 				display:block;
@@ -4052,3 +4054,5 @@ body.dark #closeErrorBtn:hover, body.dark #closeSuccessBtn:hover{
 body.dark #closeErrorBtn.button, body.dark #closeSuccessBtn.button{
 	color: #ffffff !important;
 }
+
+/*-----------------HAMBURGER MENU FOR IPHONE-----------------------------*/

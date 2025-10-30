@@ -38,7 +38,7 @@ function checkForErrors(){
     }
 
     if(!email){
-        errors = [...errors, "An email address is reqired"];
+        errors = [...errors, "An email address is required"];
     }else if(!emailTest(email)){
         errors = [...errors, "A valid email address is required"];
     }
