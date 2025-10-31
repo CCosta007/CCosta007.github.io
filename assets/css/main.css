@@ -3753,15 +3753,21 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
-			#phoneMenu{
+			 #phoneMenu{
+				background-color: #d7d7d7; /*colour behind the button*/
+				display: flex !important;
+
+			}
+			#phoneMenu:hover{
 				background-color: #636363;
 			}
 			#nav{ /*added to ensure nav bar still exists on smaller screens*/
 				display:flex;
 				background: none !important;/*so the scrollbar isn't visible and same colour as nav background*/
 				flex-direction: column;
-				align-items: center;
+				align-items: flex-start; /*so hamburger button is top left*/
 				padding: 1em 0;
+				
 			}
 
 			#wrapper #main{
@@ -3774,6 +3780,11 @@ input, select, textarea {
 				gap:0.5em;
 				padding:0;
 				margin:0;
+				background-color: white;
+				border-radius: 8px; /*same as rest of CSS*/
+				border: solid;
+				border-color: #dddddd !important; 
+				box-shadow: var(--shadow-1);
 			}
 			#nav ul.show{
 				display: flex;
@@ -3785,9 +3796,11 @@ input, select, textarea {
 			#footer {
 				padding: 3em 2em 1em 2em ;
 			}
-			body.dark #nav{
-				scrollbar-color: #121212 #1f1f1f;
-				scrollbar-width: none;
+			body.dark #nav ul{
+				background-color: #636363;
+			}
+			body.dark #phoneMenu{
+				color:#121212 !important;
 			}
 
 		}
@@ -4056,3 +4069,6 @@ body.dark #closeErrorBtn.button, body.dark #closeSuccessBtn.button{
 }
 
 /*-----------------HAMBURGER MENU FOR IPHONE-----------------------------*/
+#phoneMenu{
+	display:none;
+}

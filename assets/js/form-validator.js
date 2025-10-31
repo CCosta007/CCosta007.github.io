@@ -1,7 +1,6 @@
 document.getElementById("theSubmitBtn").addEventListener("click", (e) => {
     e.preventDefault(); //so the default form submission doesn't occur
     checkForErrors();
-    
 });
 
 //close the success pop up message if the user hits the close button
