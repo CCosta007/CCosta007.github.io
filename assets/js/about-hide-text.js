@@ -84,8 +84,8 @@ const btnArray = [
 
 /* 
 function to update the buttons to dark or light mode. Exported so the dark mode logic file can utilize.
-This function is poor and there would be a cleaner way to implement it (like an array of buttons), 
-but this was the best I could come up with and it works
+This is an updated version of a previous function that is much cleaner and easier to refactor in future. 
+The old function can be found at the end of this document. It was hideous so I updated it to this one
 */
 export function updateButtonTheme(){
     const isDark = document.body.classList.contains("dark"); /*will be true if it is in dark mode, false if it isn't */
@@ -160,7 +160,11 @@ if(bkwdBtn){
     updateButtonTheme();
 }
 
-//---------------------old updateButtonTheme function--------------------------------
+//---------------------OLD updateButtonTheme FUNCTION--------------------------------//
+
+/*function to update the buttons to dark or light mode. Exported so the dark mode logic file can utilize.
+This function is poor and there would be a cleaner way to implement it (like an array of buttons), 
+but this was the best I could come up with and it works */
 
     /*
     if(profBtn){
